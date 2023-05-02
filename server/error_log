@@ -4596,3 +4596,18 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/server/select_delegado.php on line 44
+[02-May-2023 03:47:31 UTC] PHP Fatal error:  Uncaught Error: PDO object is not initialized, constructor was not called in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/server/listar_inspecciones.php:29
+Stack trace:
+#0 /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/server/listar_inspecciones.php(29): PDO->prepare()
+#1 {main}
+  thrown in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/server/listar_inspecciones.php on line 29
+[02-May-2023 03:47:34 UTC] PHP Fatal error:  Uncaught Error: PDO object is not initialized, constructor was not called in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/server/listar_inspecciones.php:29
+Stack trace:
+#0 /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/server/listar_inspecciones.php(29): PDO->prepare()
+#1 {main}
+  thrown in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/server/listar_inspecciones.php on line 29
+[02-May-2023 03:47:50 UTC] PHP Fatal error:  Uncaught Error: PDO object is not initialized, constructor was not called in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/server/listar_inspecciones.php:29
+Stack trace:
+#0 /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/server/listar_inspecciones.php(29): PDO->prepare()
+#1 {main}
+  thrown in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/server/listar_inspecciones.php on line 29

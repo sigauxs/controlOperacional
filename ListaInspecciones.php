@@ -11,6 +11,7 @@ $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
 
+
 session_start();
 $inspector = $_SESSION['usuarioId'];
 $tipoUsuario = $_SESSION['tipoUsuario'];
@@ -79,7 +80,9 @@ $tipoUsuario = $_SESSION['tipoUsuario'];
   <?php
   $path_menu="";
   include("./components/navbar.php") ?>
-  <?php include("./components/navbar-movil.php") ?>
+  <?php include("./components/navbar-movil.php");
+
+  ?>
   <div class="container">
 
     <div class="row">

@@ -1,25 +1,24 @@
 <?php 
-$url_count = strlen(__DIR__);
-$url = substr(__DIR__,0,($url_count-10));
-require  $url . '/vendor/autoload.php';
-
-$dotenv = Dotenv\Dotenv::createImmutable($url);
-$dotenv->load();
 
 
 class Conexion extends PDO {
 
+
+    private $hostname = "sigpeco.sigpeconsultores.com.co";
+    private $bd_name = "cpoperacional";
+    private $username =  "admincp";
+    private $password =  "sigpe2022";
 
 public function __construct()
 {
 
 try {
 
-    parent::__construct('mysql:host='.$_ENV['HOSTNAME'].
-                        ';dbname='   .$_ENV['BD_NAME'].
+    parent::__construct('mysql:host='.$this->hostname.
+                        ';dbname='   .$this->bd_name.
                         ';charset=utf8',
-                        $_ENV['USERNAME'],
-                        $_ENV['PASSWORD'],
+                        $this->username,
+                        $this->password,
                         array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
 
 }catch(PDOException $e){

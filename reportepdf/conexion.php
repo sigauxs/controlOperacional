@@ -1,11 +1,20 @@
 <?php
 
+$url_count = strlen(__DIR__);
+
+
+$url = substr(__DIR__,0,($url_count-11));
+require  $url . '/vendor/autoload.php';
+
+$dotenv = Dotenv\Dotenv::createImmutable($url);
+$dotenv->load();
+
 //$mysqli = new mysqli("localhost", "admincp", "sigpe2022", "cpoperacional");
 $mysqli = new mysqli($_ENV['HOSTNAME'], $_ENV['USERNAME'],$_ENV['PASSWORD'],$_ENV['BD_NAME']);
 
-/* verificar la conexi√≥n */
+/* verificar la conexi®Æn */
 if (mysqli_connect_errno()) {
-    printf("Fall√≥ la conexi√≥n: %s\n", mysqli_connect_error());
+    printf("Fall®Æ la conexi®Æn: %s\n", mysqli_connect_error());
     exit();
 }
 

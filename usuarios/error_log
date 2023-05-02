@@ -158,3 +158,13 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/usuarios/actualizaru.php on line 10
+[02-May-2023 03:33:35 UTC] PHP Warning:  Undefined array key "HOSTNAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/reportepdf/conexion.php on line 4
+[02-May-2023 03:33:35 UTC] PHP Warning:  Undefined array key "USERNAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/reportepdf/conexion.php on line 4
+[02-May-2023 03:33:35 UTC] PHP Warning:  Undefined array key "PASSWORD" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/reportepdf/conexion.php on line 4
+[02-May-2023 03:33:35 UTC] PHP Warning:  Undefined array key "BD_NAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/reportepdf/conexion.php on line 4
+[02-May-2023 03:33:35 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'arielvidal'@'localhost' (using password: NO) in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/reportepdf/conexion.php:4
+Stack trace:
+#0 /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/reportepdf/conexion.php(4): mysqli->__construct()
+#1 /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/usuarios/lista.php(76): require('/home/arielvida...')
+#2 {main}
+  thrown in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/reportepdf/conexion.php on line 4
