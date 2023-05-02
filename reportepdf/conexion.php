@@ -9,7 +9,7 @@ require  $url . '/vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable($url);
 $dotenv->load();
 
-//$mysqli = new mysqli("localhost", "admincp", "sigpe2022", "cpoperacional");
+
 $mysqli = new mysqli($_ENV['HOSTNAME'], $_ENV['USERNAME'],$_ENV['PASSWORD'],$_ENV['BD_NAME']);
 
 /* verificar la conexi¨®n */

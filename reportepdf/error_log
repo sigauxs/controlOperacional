@@ -2988,3 +2988,8 @@ Stack trace:
 [02-May-2023 04:06:24 UTC] PHP Warning:  Undefined array key "ESTADO" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/reportepdf/cabeceraypie_listado.php on line 252
 [02-May-2023 04:06:24 UTC] PHP Warning:  Undefined array key "EMPRESA" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/reportepdf/cabeceraypie_listado.php on line 208
 [02-May-2023 04:06:24 UTC] PHP Warning:  Undefined array key "ESTADO" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/reportepdf/cabeceraypie_listado.php on line 252
+[02-May-2023 04:17:03 UTC] PHP Warning:  Undefined array key "EMPRESA" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/reportepdf/cabeceraypie_listado.php on line 208
+[02-May-2023 04:17:03 UTC] PHP Warning:  Undefined array key "EMPRESA" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/reportepdf/cabeceraypie_listado.php on line 208
+[02-May-2023 04:17:03 UTC] PHP Warning:  Undefined array key "ESTADO" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/reportepdf/cabeceraypie_listado.php on line 252
+[02-May-2023 04:17:04 UTC] PHP Warning:  Undefined array key "EMPRESA" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/reportepdf/cabeceraypie_listado.php on line 208
+[02-May-2023 04:17:04 UTC] PHP Warning:  Undefined array key "ESTADO" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/reportepdf/cabeceraypie_listado.php on line 252

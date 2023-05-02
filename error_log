@@ -1483,3 +1483,83 @@ Stack trace:
 [02-May-2023 04:06:09 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 26
 [02-May-2023 04:06:09 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 34
 [02-May-2023 04:06:09 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 41
+[02-May-2023 04:15:41 UTC] PHP Warning:  Undefined array key "HOSTNAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 21
+[02-May-2023 04:15:41 UTC] PHP Warning:  Undefined array key "BD_NAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 22
+[02-May-2023 04:15:41 UTC] PHP Warning:  Undefined array key "USERNAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 24
+[02-May-2023 04:15:41 UTC] PHP Warning:  Undefined array key "PASSWORD" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 25
+[02-May-2023 04:15:41 UTC] PHP Warning:  Undefined array key "HOSTNAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 21
+[02-May-2023 04:15:41 UTC] PHP Warning:  Undefined array key "BD_NAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 22
+[02-May-2023 04:15:41 UTC] PHP Warning:  Undefined array key "USERNAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 24
+[02-May-2023 04:15:41 UTC] PHP Warning:  Undefined array key "PASSWORD" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 25
+[02-May-2023 04:16:10 UTC] PHP Warning:  Undefined array key "HOSTNAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 21
+[02-May-2023 04:16:10 UTC] PHP Warning:  Undefined array key "BD_NAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 22
+[02-May-2023 04:16:10 UTC] PHP Warning:  Undefined array key "USERNAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 24
+[02-May-2023 04:16:10 UTC] PHP Warning:  Undefined array key "PASSWORD" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 25
+[02-May-2023 04:16:10 UTC] PHP Warning:  Undefined array key "HOSTNAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 21
+[02-May-2023 04:16:10 UTC] PHP Warning:  Undefined array key "BD_NAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 22
+[02-May-2023 04:16:10 UTC] PHP Warning:  Undefined array key "USERNAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 24
+[02-May-2023 04:16:10 UTC] PHP Warning:  Undefined array key "PASSWORD" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 25
+[02-May-2023 04:16:11 UTC] PHP Warning:  Undefined array key "HOSTNAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 21
+[02-May-2023 04:16:11 UTC] PHP Warning:  Undefined array key "BD_NAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 22
+[02-May-2023 04:16:11 UTC] PHP Warning:  Undefined array key "USERNAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 24
+[02-May-2023 04:16:11 UTC] PHP Warning:  Undefined array key "PASSWORD" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 25
+[02-May-2023 04:16:11 UTC] PHP Warning:  Undefined array key "HOSTNAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 21
+[02-May-2023 04:16:11 UTC] PHP Warning:  Undefined array key "BD_NAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 22
+[02-May-2023 04:16:11 UTC] PHP Warning:  Undefined array key "USERNAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 24
+[02-May-2023 04:16:11 UTC] PHP Warning:  Undefined array key "PASSWORD" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 25
+[02-May-2023 04:16:12 UTC] PHP Warning:  Undefined array key "HOSTNAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 21
+[02-May-2023 04:16:12 UTC] PHP Warning:  Undefined array key "BD_NAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 22
+[02-May-2023 04:16:12 UTC] PHP Warning:  Undefined array key "USERNAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 24
+[02-May-2023 04:16:12 UTC] PHP Warning:  Undefined array key "PASSWORD" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 25
+[02-May-2023 04:16:12 UTC] PHP Warning:  Undefined array key "HOSTNAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 21
+[02-May-2023 04:16:12 UTC] PHP Warning:  Undefined array key "BD_NAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 22
+[02-May-2023 04:16:12 UTC] PHP Warning:  Undefined array key "USERNAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 24
+[02-May-2023 04:16:12 UTC] PHP Warning:  Undefined array key "PASSWORD" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 25
+[02-May-2023 04:16:13 UTC] PHP Warning:  Undefined array key "HOSTNAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 21
+[02-May-2023 04:16:13 UTC] PHP Warning:  Undefined array key "BD_NAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 22
+[02-May-2023 04:16:13 UTC] PHP Warning:  Undefined array key "USERNAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 24
+[02-May-2023 04:16:13 UTC] PHP Warning:  Undefined array key "PASSWORD" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 25
+[02-May-2023 04:16:13 UTC] PHP Warning:  Undefined array key "HOSTNAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 21
+[02-May-2023 04:16:13 UTC] PHP Warning:  Undefined array key "BD_NAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 22
+[02-May-2023 04:16:13 UTC] PHP Warning:  Undefined array key "USERNAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 24
+[02-May-2023 04:16:13 UTC] PHP Warning:  Undefined array key "PASSWORD" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 25
+[02-May-2023 04:16:21 UTC] PHP Warning:  Undefined array key "HOSTNAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 21
+[02-May-2023 04:16:21 UTC] PHP Warning:  Undefined array key "BD_NAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 22
+[02-May-2023 04:16:21 UTC] PHP Warning:  Undefined array key "USERNAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 24
+[02-May-2023 04:16:21 UTC] PHP Warning:  Undefined array key "PASSWORD" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 25
+[02-May-2023 04:16:21 UTC] PHP Warning:  Undefined array key "HOSTNAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 21
+[02-May-2023 04:16:21 UTC] PHP Warning:  Undefined array key "BD_NAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 22
+[02-May-2023 04:16:21 UTC] PHP Warning:  Undefined array key "USERNAME" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 24
+[02-May-2023 04:16:21 UTC] PHP Warning:  Undefined array key "PASSWORD" in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/connection/connection.php on line 25
+[02-May-2023 04:16:51 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 18
+[02-May-2023 04:16:51 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 26
+[02-May-2023 04:16:51 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 34
+[02-May-2023 04:16:51 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 41
+[02-May-2023 04:17:09 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 18
+[02-May-2023 04:17:09 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 26
+[02-May-2023 04:17:09 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 34
+[02-May-2023 04:17:09 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 41
+[02-May-2023 04:17:26 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 18
+[02-May-2023 04:17:26 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 26
+[02-May-2023 04:17:26 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 34
+[02-May-2023 04:17:26 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 41
+[02-May-2023 04:17:30 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 18
+[02-May-2023 04:17:30 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 26
+[02-May-2023 04:17:30 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 34
+[02-May-2023 04:17:30 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 41
+[02-May-2023 04:17:36 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 18
+[02-May-2023 04:17:36 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 26
+[02-May-2023 04:17:36 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 34
+[02-May-2023 04:17:36 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 41
+[02-May-2023 04:17:47 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 18
+[02-May-2023 04:17:47 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 26
+[02-May-2023 04:17:47 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 34
+[02-May-2023 04:17:47 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 41
+[02-May-2023 04:17:51 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 18
+[02-May-2023 04:17:51 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 26
+[02-May-2023 04:17:51 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 34
+[02-May-2023 04:17:51 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 41
+[02-May-2023 04:18:21 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 18
+[02-May-2023 04:18:21 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 26
+[02-May-2023 04:18:21 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 34
+[02-May-2023 04:18:21 UTC] PHP Warning:  Undefined variable $path_menu in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/components/navbar.php on line 41
