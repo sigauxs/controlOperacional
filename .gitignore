@@ -13,3 +13,8 @@ hallazgo
 # Ignora archivos de configuración SASS
 .sass-cache
 vendor/mailgun/mailgun-php/hbrticyn.php
+
+
+#Archivos de conexion
+connection/connection.php
+reportepdf/conexion.php
