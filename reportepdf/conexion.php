@@ -1,7 +1,7 @@
 <?php
 
 //$mysqli = new mysqli("localhost", "admincp", "sigpe2022", "cpoperacional");
-$mysqli = new mysqli("localhost", "admincp", "sigpe2022", "cpoperacional");
+$mysqli = new mysqli($_ENV['HOSTNAME'], $_ENV['USERNAME'],$_ENV['PASSWORD'],$_ENV['BD_NAME']);
 
 /* verificar la conexión */
 if (mysqli_connect_errno()) {

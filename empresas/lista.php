@@ -8,7 +8,7 @@ $styleOwnSelf = "../css/lista.css";
 include("../components/header.php");
 
 
-
+$url_count = strlen(__DIR__);
 $url = substr(__DIR__,0,($url_count-9));
 require  $url . '/vendor/autoload.php';
 
@@ -27,6 +27,7 @@ $dotenv->load();
     include("../components/navbar.php");
     
     include("../components/navbar-movil.php");
+
 
     ?>
     
