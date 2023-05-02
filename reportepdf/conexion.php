@@ -1,5 +1,5 @@
 <?php
-
+//prueb
 $url_count = strlen(__DIR__);
 
 
@@ -12,9 +12,9 @@ $dotenv->load();
 
 $mysqli = new mysqli($_ENV['HOSTNAME'], $_ENV['USERNAME'],$_ENV['PASSWORD'],$_ENV['BD_NAME']);
 
-/* verificar la conexi¨®n */
+/* verificar la conexiï¿½ï¿½n */
 if (mysqli_connect_errno()) {
-    printf("Fall¨® la conexi¨®n: %s\n", mysqli_connect_error());
+    printf("Fallï¿½ï¿½ la conexiï¿½ï¿½n: %s\n", mysqli_connect_error());
     exit();
 }
 
