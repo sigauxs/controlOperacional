@@ -1,7 +1,13 @@
-<?php 
+<?php
+
+
+//$url_count = strlen(__DIR__);
+//$url = substr(__DIR__,0,($url_count-11));
+
 $url_count = strlen(__DIR__);
 $url = substr(__DIR__,0,($url_count-11));
 
+echo $url;
 
 require  $url . '/vendor/autoload.php';
 

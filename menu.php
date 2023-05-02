@@ -93,7 +93,7 @@ $tipoUsuario = $_SESSION['tipoUsuario'];
             
              <?php if(typeAdmin($tipoUsuario)) { ?>
                  <div class="col-sm-6 col-md-6 text-center mt-2">
-                <a href="http://controlope.sigpeconsultores.com.co/empresas/lista.php" class="text-link text-link--mt">
+                <a href="<?php echo $_ENV['URL'] ?>/empresas/lista.php" class="text-link text-link--mt">
                     <img src="./assets/images/empresas.png" alt="iconos" class="img-menu mt-1 menu-img p-0">
                     <hr class="hr_red mx-auto mb-3" style="border-radius:15px; width:70px; margin-top:35px">
                     <p class="head-listado"> Empresas </p>
