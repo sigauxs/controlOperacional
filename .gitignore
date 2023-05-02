@@ -15,3 +15,5 @@ hallazgo
 vendor/mailgun/mailgun-php/hbrticyn.php
 
 
+connection/connection.php
+reportepdf/conexion.php
