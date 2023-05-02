@@ -1,0 +1,42 @@
+.thead { 
+    background-color: #EDEDED;
+    text-transform: uppercase;
+    color: #878788;
+    font-size: 12px;
+    text-align: center;
+}
+
+.td_fecha{
+    font-weight: 600;
+    color:#E31937;
+}
+
+.td_id{
+    font-weight: 600;
+    color:#878788;
+ 
+}
+
+ td {
+    color: #999999;
+}
+
+.icon_edit{
+    color: #E31D38;
+    
+}
+.table > :not(caption) > * > * {
+
+    border-bottom-width: 0  !important;
+   
+}
+
+table {
+    border-collapse: collapse;
+    border-radius: 10px;
+    border-style: hidden;
+    box-shadow: 0px 0 0 3px #EDEDED;
+    overflow: hidden;
+}
+
+

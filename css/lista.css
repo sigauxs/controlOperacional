@@ -1,0 +1,72 @@
+
+.table-fixed {
+    width: 100%;
+}
+
+.table-fixed thead {
+    background-color: #EDEDED;
+    text-transform: uppercase;
+    color: #878788;
+    font-size: 12px;
+    text-align: center;
+}
+
+.table-fixed tbody {
+    height: 200px;
+    overflow-y: auto;
+    width: 100%;
+}
+.table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
+    display: block;
+}
+.table-fixed tbody td {
+    float: left;
+}
+.table-fixed thead tr th {
+    float: left;
+}
+
+#busquedas input::placeholder {
+    color:#b3b3b3 !important; 
+}
+
+/*Lista hallazgo*/
+
+#thallazgo td{ 
+    height: 55px !important;
+}
+
+
+
+/* Modal loader */
+
+.div-center-modal-loader{
+    display: flex;
+    align-items: center;
+    justify-content: center !important;
+}
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #E31D38; /* Red */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .modal-footer {
+    border-top: 1px solid transparent !important;
+  }
+
+  .modal-footer p {
+    font-weight: 600;
+    font-size: 20px;
+  }
+  
+/* Modal loader */  

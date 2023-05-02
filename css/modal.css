@@ -1,0 +1,80 @@
+#desviaciones .form-select:focus {
+    border-color: #fe8686;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem #E31937;
+  }
+
+  .form-select{
+      color:gray;
+  }
+
+ 
+
+
+
+.btncloseX {
+margin-left: 10px;
+margin-top: 10px;
+padding-left: 15px;
+padding-right: 15px;
+padding-top: 2px;
+padding-bottom: 2px;
+background-color: #E31937;
+color: white;
+}
+
+.btn-file{
+    color: #878788;
+    background-color: #EDEDED;
+    font-size: 15px;
+    font-weight: 500;
+    
+ }
+
+ .btn-file--size{
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    width: 180px;
+ }
+
+ .btn-file--border{
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-size: 14px;
+ }
+
+ .btn-save{
+    color: #fff;
+    background-color: #E31937;
+    border-color: #E31937;
+    margin-left: 20%;
+    padding-left: 25px;
+    padding-right: 25px;
+ }
+
+ .btn-save:hover{
+    color: #E31937;
+    background-color: #fff;
+    border-color: #E31937;
+    font-weight: 700;
+ }
+
+ .btn-cancel{
+    margin-left: 20%;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-weight: 700;
+    padding-top: 6.5px;
+    padding-bottom: 6.5px;
+ }
+
+ .btn-cancel:hover{
+    color: white;
+    background-color: #878788;
+    border-color: white;
+    font-weight: 700;
+ }
+
+

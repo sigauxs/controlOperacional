@@ -1,0 +1,313 @@
+@import url("../css/navbar.css");
+@import url("../css/brand.css");
+@import url("../css/table.css");
+@import url("../css/modal.css");
+@import url("../css/utilidades.css");
+
+
+@font-face {
+    font-family: 'tahoma';
+    src: url('../assets/fonts/tahoma.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  @font-face {
+    font-family: 'tahoma bold';
+    src: url('../assets/fonts/tahomabd.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+  }
+
+
+.useFontAwesomeFamily::placeholder { /* Most modern browsers */
+    /*font-family: "Font Awesome 5 Brands" !important;*/
+    font-family: FontAwesome;
+    font-size: 10px;
+    text-transform: capitalize;
+    
+}
+
+body{
+    font-family: 'tahoma' ;
+}
+
+
+.user_icon--position-absolute{
+    position: absolute;
+    left: 30%;
+}
+
+.w-card{
+    width: 18rem;
+}
+
+
+
+.btn-login{
+    background-color: #E31D38 !important;
+}
+
+
+/* Login */
+
+.img-index {
+    width:100%;
+}
+
+.card{
+    bottom: 40px;
+}
+
+.card-body {
+    z-index: 1;
+    background-color: rgb(211 211 211) !important;
+}
+
+.card-login {
+    width: 20rem;
+}
+
+.img-login{
+    width:240px;
+}
+
+.b-40{
+    bottom: 40px;
+}
+
+.r-20 {
+    border-radius:20px;
+}
+
+.mt-100{
+  margin-top: 100px;
+}
+
+.img-flex{
+    display: flex;
+}
+
+.card-footer-t{
+background-color:transparent !important;
+}
+
+.card-footer-t hr {
+    border-radius: 30px;
+    width: 80% !important;
+    color: #E31937;
+    opacity: 1 !important;
+    height: 5px !important;
+}
+
+.div--center-images {
+    background-color: transparent;
+    top:20% !important;
+    z-index: 2;
+  }
+  
+.div--center-images img {
+    z-index: 2;
+    position: relative;
+    top: 40px;
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #E31D38 !important;; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #E31D38 !important;;
+ 
+}
+
+  .scroller {
+    overflow-y: scroll;
+    scrollbar-color: #E31D38 transparent;
+    scrollbar-width: thin;
+  }
+
+/* Menu main */
+
+.text-link {
+    color:#000;
+    text-decoration: none;
+}
+
+.text-link p {
+    margin-top: 0.5rem;
+}
+
+.img-menu { transition: all .2s ease-in-out; }
+.img-menu:hover { transform: scale(1.1); }
+
+
+.text-link p{ transition: all .2s ease-in-out; }
+.text-link p:hover {
+    transform: scale(1.1);
+}
+
+select {
+    background-color: rgba(242, 242, 242,1) !important;
+}
+
+.bg-transparent {
+    background-color: transparent !important;
+}
+
+
+/* end menu main*/
+
+
+/* inspeccion */
+
+#description_inspeccion, #fechaInspeccion {
+    background-color: rgba(242, 242, 242,1);
+}
+
+.card-title { 
+    font-size:1.15rem !important;
+}
+
+.btn-register {
+    background-color: #E31D38 !important;
+}
+
+/* end inspeccion */
+
+#myImg{
+    animation: 7s easy ;
+}
+
+#myImg:hover{
+        -ms-transform: scale(1.5); /* IE 9 */
+        -webkit-transform: scale(.5); /* Safari 3-8 */
+        transform: scale(2.5); 
+}
+
+.head-listado{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    color: #878788
+}
+
+tbody{
+    text-align: center;
+}
+
+.menu-img{
+    width: 200px !important;
+    border-radius: 999px !important;
+}
+
+.head-menu{
+    font-style: normal;
+    color: #878788;
+    font-family: "tahoma bold";
+}
+
+
+/* form */
+
+.remember input:checked {
+    background-color: red;
+}
+
+input[type="checkbox"]:checked{
+background-color:red;
+}
+
+.forgot{
+    font-size: 11px;
+    color:#878788;
+    text-decoration: none;
+}
+
+.forgot:hover{
+    font-size: 11px;
+    color:#E31937;
+}
+
+.remember-text {
+    font-size: 11px !important;
+    font-weight: 100 !important;
+}
+
+.d-none{
+    display: none;
+}
+
+.bg-modal{
+    
+  background-color: #E31D38 !important;
+    
+}
+
+.fs-td{
+    font-size: 14.5px;
+}
+
+
+
+  
+
+#scroll {
+   height: 500px;
+   overflow-y: auto;
+   overflow-x: hidden;
+}
+
+
+.label-inspecciones{
+    font-weight: normal;
+    color: #666;
+}
+
+
+/* Lista de hallazgo */
+
+.modal_imagen{
+ width: 800px !important;
+ height:auto;
+ position:absolute;
+ left:-150px;
+}
+
+
+/* Inspeccion */
+
+.w-select-inspeccion {
+    width: 95%;
+    display: inline-block;
+}
+
+
+/*Tabla con encabezado fijo y cuerpo en scroll*/
+
+/* registrar Hallazgo */
+.d-display-none {
+    display:none;
+  }
+/* end registrar hallazgo*/
+
+/* Nav bar movil*/
+  .nav-link-movil {
+      color: rgba(255,255,255,.85) !important;
+  
+  }
+/**/

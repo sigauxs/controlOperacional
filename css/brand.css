@@ -1,0 +1,13 @@
+.brand_sigpe{
+    max-width: 100px;
+    padding: 10px;
+}
+
+.bg-brand{
+    background-color:#EDEDED;
+}
+
+.bg-brand span i {
+    padding: 10px;
+    color: #A0A0A0;
+}

@@ -1,0 +1,22 @@
+/* FormRegistroUsuario */
+
+#formRegistroUsuario input {
+    background-color: rgba(242, 242, 242,1);
+}
+
+
+.d4{
+    color: blue;
+}
+
+.invalid-document { 
+    float: right;
+    color: red
+    ;font-size: 15px;
+    padding-top: 0px;
+}
+
+.outline-border {
+    outline: 2px solid red;
+}
+

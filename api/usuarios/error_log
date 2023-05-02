@@ -1,0 +1,154 @@
+[24-Oct-2022 18:08:32 America/Bogota] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cpoperacional`.`pertenece`, CONSTRAINT `Foranea_idArea_Pertenece` FOREIGN KEY (`Area_idArea`) REFERENCES `areas` (`id_Area`) ON DELETE CASCADE ON UPDATE CASCADE) in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/perteneceusuario.php:58
+Stack trace:
+#0 /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/perteneceusuario.php(58): PDOStatement->execute()
+#1 {main}
+  thrown in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/perteneceusuario.php on line 58
+[04-Nov-2022 20:33:23 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cpoperacional.PERTENECE' doesn't exist in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php:32
+Stack trace:
+#0 /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 32
+[04-Nov-2022 21:13:14 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cpoperacional.PERTENECE' doesn't exist in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php:32
+Stack trace:
+#0 /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 32
+[04-Nov-2022 21:14:22 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cpoperacional.PERTENECE' doesn't exist in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php:32
+Stack trace:
+#0 /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 32
+[04-Nov-2022 21:15:34 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cpoperacional.PERTENECE' doesn't exist in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php:32
+Stack trace:
+#0 /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 32
+[04-Nov-2022 21:16:48 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cpoperacional.PERTENECE' doesn't exist in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php:32
+Stack trace:
+#0 /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 32
+[04-Nov-2022 21:18:48 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cpoperacional.PERTENECE' doesn't exist in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php:32
+Stack trace:
+#0 /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 32
+[04-Nov-2022 21:19:14 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cpoperacional.PERTENECE' doesn't exist in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php:32
+Stack trace:
+#0 /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 32
+[04-Nov-2022 21:19:38 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cpoperacional.PERTENECE' doesn't exist in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php:32
+Stack trace:
+#0 /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 32
+[04-Nov-2022 21:19:41 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cpoperacional.PERTENECE' doesn't exist in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php:32
+Stack trace:
+#0 /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 32
+[04-Nov-2022 21:20:39 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cpoperacional.PERTENECE' doesn't exist in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php:32
+Stack trace:
+#0 /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 32
+[04-Nov-2022 21:23:52 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cpoperacional.PERTENECE' doesn't exist in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php:32
+Stack trace:
+#0 /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 32
+[04-Nov-2022 21:25:37 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cpoperacional.PERTENECE' doesn't exist in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php:32
+Stack trace:
+#0 /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 32
+[04-Nov-2022 21:28:57 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cpoperacional.PERTENECE' doesn't exist in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php:32
+Stack trace:
+#0 /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 32
+[04-Nov-2022 21:29:11 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cpoperacional.PERTENECE' doesn't exist in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php:32
+Stack trace:
+#0 /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 32
+[04-Nov-2022 21:29:29 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cpoperacional.PERTENECE' doesn't exist in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php:32
+Stack trace:
+#0 /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 32
+[04-Nov-2022 21:29:37 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cpoperacional.PERTENECE' doesn't exist in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php:32
+Stack trace:
+#0 /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 32
+[04-Nov-2022 21:29:40 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cpoperacional.PERTENECE' doesn't exist in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php:32
+Stack trace:
+#0 /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 32
+[04-Nov-2022 21:29:50 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cpoperacional.PERTENECE' doesn't exist in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php:32
+Stack trace:
+#0 /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 32
+[04-Nov-2022 21:31:30 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cpoperacional.PERTENECE' doesn't exist in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php:32
+Stack trace:
+#0 /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 32
+[04-Nov-2022 21:33:22 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cpoperacional.PERTENECE' doesn't exist in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php:32
+Stack trace:
+#0 /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 32
+[04-Nov-2022 21:34:34 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cpoperacional.PERTENECE' doesn't exist in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php:32
+Stack trace:
+#0 /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 32
+[04-Nov-2022 21:39:15 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cpoperacional.PERTENECE' doesn't exist in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php:32
+Stack trace:
+#0 /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 32
+[04-Nov-2022 21:39:27 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cpoperacional.PERTENECE' doesn't exist in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php:32
+Stack trace:
+#0 /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 32
+[04-Nov-2022 21:43:09 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cpoperacional.PERTENECE' doesn't exist in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php:32
+Stack trace:
+#0 /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php(32): PDOStatement->execute()
+#1 {main}
+  thrown in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 32
+[04-Nov-2022 21:43:15 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '146-2-3' for key 'PRIMARY' in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php:57
+Stack trace:
+#0 /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php(57): PDOStatement->execute()
+#1 {main}
+  thrown in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 57
+[04-Nov-2022 21:48:21 UTC] PHP Warning:  Undefined array key "area" in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 24
+[04-Nov-2022 21:48:21 UTC] PHP Warning:  Undefined array key "usuario" in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 25
+[04-Nov-2022 21:48:21 UTC] PHP Warning:  Undefined array key "locacion" in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 26
+[04-Nov-2022 21:48:37 UTC] PHP Warning:  Undefined array key "area" in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 24
+[04-Nov-2022 21:48:37 UTC] PHP Warning:  Undefined array key "usuario" in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 25
+[04-Nov-2022 21:48:37 UTC] PHP Warning:  Undefined array key "locacion" in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 26
+[04-Nov-2022 21:48:50 UTC] PHP Warning:  Undefined array key "area" in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 24
+[04-Nov-2022 21:48:50 UTC] PHP Warning:  Undefined array key "usuario" in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 25
+[04-Nov-2022 21:48:50 UTC] PHP Warning:  Undefined array key "locacion" in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 26
+[04-Nov-2022 21:51:20 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cpoperacional.PERTENECE' doesn't exist in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php:35
+Stack trace:
+#0 /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php(35): PDOStatement->execute()
+#1 {main}
+  thrown in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/api/usuarios/rwpertenece.php on line 35
+[27-Feb-2023 18:16:52 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cpoperacional`.`pertenece`, CONSTRAINT `Foranea_idArea_Pertenece` FOREIGN KEY (`Area_idArea`) REFERENCES `areas` (`id_Area`) ON DELETE CASCADE ON UPDATE CASCADE) in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/api/usuarios/perteneceusuario.php:58
+Stack trace:
+#0 /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/api/usuarios/perteneceusuario.php(58): PDOStatement->execute()
+#1 {main}
+  thrown in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/api/usuarios/perteneceusuario.php on line 58
+[27-Feb-2023 18:16:55 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cpoperacional`.`pertenece`, CONSTRAINT `Foranea_idArea_Pertenece` FOREIGN KEY (`Area_idArea`) REFERENCES `areas` (`id_Area`) ON DELETE CASCADE ON UPDATE CASCADE) in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/api/usuarios/perteneceusuario.php:58
+Stack trace:
+#0 /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/api/usuarios/perteneceusuario.php(58): PDOStatement->execute()
+#1 {main}
+  thrown in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/api/usuarios/perteneceusuario.php on line 58

@@ -1,0 +1,112 @@
+.encabezado_listado{
+   color: #E31937;
+   font-size: 35px;
+}
+
+.hr_red{
+    color: #E31937;
+    max-width: 90px;
+    opacity: 1 !important;
+    height: 5px !important;
+}
+
+/* radio buttom */
+
+.radio-item {
+    display: inline-block;
+    position: relative;
+    padding: 0 6px;
+    margin: 10px 0 0;
+  }
+  
+  .radio-item input[type='radio'] {
+    display: none;
+  }
+  
+  .radio-item label {
+    color: #666;
+    font-weight: normal;
+  }
+  
+  .radio-item label:before {
+    content: " ";
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    margin: 0 5px 0 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 11px;
+    border: 2px solid #E31937;
+    background-color: transparent;
+  }
+  
+  .radio-item input[type=radio]:checked + label:after {
+    border-radius: 11px;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 9px;
+    left: 10px;
+    content: " ";
+    display: block;
+    background: #E31937;
+
+  }
+
+ #dates input[type=date]{
+     border:3.5px solid #E31937;
+    width: 220px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #878788;
+ }
+
+
+
+ .btn-consultar{
+    color: #878788;
+    background-color: #EDEDED;
+    font-size: 15px;
+    font-weight: 500;
+    
+ }
+
+ .btn-consultar--size{
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    width: 180px;
+ }
+
+ .btn-consultar--border{
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-size: 18px;
+ }
+
+
+ .btn-consultar:hover{
+    color:  #EDEDED;
+    background-color: #878788;
+ }
+
+ .grid-center{
+    justify-content: center;
+    display: grid;
+ }
+
+
+ form label{
+   font-style: normal;
+   font-weight: 700;
+   font-size: 15px;
+   color: #878788
+ }
+
+#formInspeccion select{
+  color: gray;
+}
+

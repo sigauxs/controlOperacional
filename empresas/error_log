@@ -1,0 +1,29 @@
+[17-Aug-2022 21:46:00 UTC] PHP Warning:  include(../components/header.php): failed to open stream: No such file or directory in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/empresas/lista.php on line 7
+[17-Aug-2022 21:46:00 UTC] PHP Warning:  include(): Failed opening '../components/header.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/empresas/lista.php on line 7
+[17-Aug-2022 21:47:59 UTC] PHP Warning:  include(../components/header.php): failed to open stream: No such file or directory in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/empresas/lista.php on line 7
+[17-Aug-2022 21:47:59 UTC] PHP Warning:  include(): Failed opening '../components/header.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/empresas/lista.php on line 7
+[17-Aug-2022 21:52:42 UTC] PHP Warning:  include(../components/header.php): failed to open stream: No such file or directory in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/empresas/lista.php on line 7
+[17-Aug-2022 21:52:42 UTC] PHP Warning:  include(): Failed opening '../components/header.php' for inclusion (include_path='.:/opt/alt/php74/usr/share/pear') in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/empresas/lista.php on line 7
+[26-Apr-2023 15:25:54 UTC] PHP Warning:  require(/home/arielvidal/public_html/controlope.sigpeconsultores.com.co/empresas/vendor/autoload.php): Failed to open stream: No such file or directory in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/empresas/lista.php on line 9
+[26-Apr-2023 15:25:54 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/arielvidal/public_html/controlope.sigpeconsultores.com.co/empresas/vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/empresas/lista.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/empresas/lista.php on line 9
+[26-Apr-2023 15:32:44 UTC] PHP Warning:  require(/home/arielvidal/public_html/controlope.sigpeconsultores.com.co/empresas/vendor/autoload.php): Failed to open stream: No such file or directory in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/empresas/lista.php on line 10
+[26-Apr-2023 15:32:44 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/arielvidal/public_html/controlope.sigpeconsultores.com.co/empresas/vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/empresas/lista.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/empresas/lista.php on line 10
+[26-Apr-2023 15:52:50 UTC] PHP Warning:  require(/home/arielvidal/public_html/controlope.sigpeconsultores.com.co/empresas/vendor/autoload.php): Failed to open stream: No such file or directory in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/empresas/lista.php on line 10
+[26-Apr-2023 15:52:50 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/arielvidal/public_html/controlope.sigpeconsultores.com.co/empresas/vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/empresas/lista.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/empresas/lista.php on line 10
+[26-Apr-2023 15:54:16 UTC] PHP Warning:  require(/home/arielvidal/public_html/controlope.sigpeconsultores.com.co/empresas/vendor/autoload.php): Failed to open stream: No such file or directory in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/empresas/lista.php on line 10
+[26-Apr-2023 15:54:16 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/arielvidal/public_html/controlope.sigpeconsultores.com.co/empresas/vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/empresas/lista.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/empresas/lista.php on line 10
+[26-Apr-2023 16:17:25 UTC] PHP Warning:  Undefined variable $url_count in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/empresas/lista.php on line 12
+[26-Apr-2023 16:18:38 UTC] PHP Warning:  Undefined variable $url_count in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/empresas/lista.php on line 12
+[26-Apr-2023 16:18:46 UTC] PHP Warning:  Undefined variable $url_count in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/empresas/lista.php on line 12

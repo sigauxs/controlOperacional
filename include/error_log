@@ -1,0 +1,15 @@
+[07-Feb-2023 06:42:16 UTC] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/include/style2.php:9
+Stack trace:
+#0 /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/include/style2.php(9): file_get_contents()
+#1 {main}
+  thrown in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/include/style2.php on line 9
+[08-Feb-2023 01:16:33 UTC] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/include/style2.php:9
+Stack trace:
+#0 /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/include/style2.php(9): file_get_contents()
+#1 {main}
+  thrown in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/include/style2.php on line 9
+[08-Feb-2023 01:18:51 UTC] PHP Fatal error:  Uncaught ValueError: Path cannot be empty in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/include/style2.php:9
+Stack trace:
+#0 /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/include/style2.php(9): file_get_contents()
+#1 {main}
+  thrown in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/include/style2.php on line 9

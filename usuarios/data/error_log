@@ -1,0 +1,27 @@
+[18-Aug-2022 16:40:17 America/Bogota] PHP Notice:  Undefined index: snombre in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/usuarios/data/RegistroPUP.php on line 8
+[18-Aug-2022 16:45:34 America/Bogota] PHP Notice:  Undefined index: snombre in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/usuarios/data/RegistroPUP.php on line 8
+[18-Aug-2022 16:45:34 America/Bogota] PHP Notice:  Undefined variable: idUsuario in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/usuarios/data/RegistroPUP.php on line 48
+[18-Aug-2022 16:45:34 America/Bogota] PHP Notice:  Undefined variable: idUsuario in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/usuarios/data/RegistroPUP.php on line 62
+[18-Aug-2022 16:56:39 America/Bogota] PHP Notice:  Undefined index: snombre in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/usuarios/data/RegistroPUP.php on line 8
+[31-Aug-2022 09:20:34 America/Bogota] PHP Notice:  Undefined index: snombre in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/usuarios/data/RegistroPUP.php on line 8
+[31-Aug-2022 09:42:12 America/Bogota] PHP Notice:  Undefined index: snombre in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/usuarios/data/RegistroPUP.php on line 8
+[11-Oct-2022 08:45:03 America/Bogota] PHP Warning:  Undefined array key "snombre" in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/usuarios/data/RegistroPUP.php on line 8
+[01-Nov-2022 13:21:29 UTC] PHP Warning:  Undefined array key "snombre" in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/usuarios/data/RegistroPUP.php on line 8
+[01-Nov-2022 13:45:53 UTC] PHP Warning:  Undefined array key "snombre" in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/usuarios/data/RegistroPUP.php on line 8
+[21-Jan-2023 19:52:36 UTC] PHP Warning:  Undefined array key "snombre" in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/usuarios/data/RegistroPUP.php on line 8
+[21-Jan-2023 19:56:35 UTC] PHP Warning:  Undefined array key "snombre" in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/usuarios/data/RegistroPUP.php on line 8
+[22-Jan-2023 18:38:54 UTC] PHP Warning:  Undefined array key "snombre" in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/usuarios/data/RegistroPUP.php on line 8
+[22-Jan-2023 18:46:59 UTC] PHP Warning:  Undefined array key "snombre" in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/usuarios/data/RegistroPUP.php on line 8
+[22-Jan-2023 18:51:47 UTC] PHP Warning:  Undefined array key "snombre" in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/usuarios/data/RegistroPUP.php on line 8
+[10-Feb-2023 13:14:16 UTC] PHP Warning:  Undefined array key "snombre" in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/usuarios/data/RegistroPUP.php on line 8
+[14-Feb-2023 16:24:32 UTC] PHP Warning:  Undefined array key "snombre" in /home/arielvidal/public_html/sigpeco.sigpeconsultores.com.co/usuarios/data/RegistroPUP.php on line 8
+[06-Mar-2023 18:19:26 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cpoperacional`.`personas`, CONSTRAINT `fk_idpersona_Tipo_Identificacion` FOREIGN KEY (`TipoID`) REFERENCES `tipo_identificacion` (`idTipo`) ON DELETE CASCADE ON UPDATE CASCADE)' in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/usuarios/data/RegistroPUP.php:41
+Stack trace:
+#0 /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/usuarios/data/RegistroPUP.php(41): PDOStatement->execute()
+#1 {main}
+  thrown in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/usuarios/data/RegistroPUP.php on line 41
+[06-Mar-2023 18:19:48 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`cpoperacional`.`personas`, CONSTRAINT `fk_idpersona_Tipo_Identificacion` FOREIGN KEY (`TipoID`) REFERENCES `tipo_identificacion` (`idTipo`) ON DELETE CASCADE ON UPDATE CASCADE)' in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/usuarios/data/RegistroPUP.php:41
+Stack trace:
+#0 /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/usuarios/data/RegistroPUP.php(41): PDOStatement->execute()
+#1 {main}
+  thrown in /home/arielvidal/public_html/controlope.sigpeconsultores.com.co/usuarios/data/RegistroPUP.php on line 41

