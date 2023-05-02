@@ -12,6 +12,7 @@ $url_count = strlen(__DIR__);
 $url = substr(__DIR__,0,($url_count-9));
 require  $url . '/vendor/autoload.php';
 
+
 $dotenv = Dotenv\Dotenv::createImmutable($url);
 $dotenv->load();
 
@@ -28,6 +29,7 @@ $dotenv->load();
     
     include("../components/navbar-movil.php");
 
+ 
 
     ?>
     

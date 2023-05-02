@@ -30,6 +30,8 @@ const mostrar = (empresas) => {
 const todasEmpresasFetch = async () => {
 
     const urlEmpresas = `${URL_ENV}/api/empresas.php`;
+
+    console.log( urlEmpresas );
     const response = await fetch(urlEmpresas , {
         method: 'GET'
     });
