@@ -12,3 +12,4 @@ hallazgo
 
 # Ignora archivos de configuración SASS
 .sass-cache
+vendor/mailgun/mailgun-php/hbrticyn.php
