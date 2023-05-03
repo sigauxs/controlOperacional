@@ -52,7 +52,7 @@ $dotenv->load();
                         <form>
                                 <div class="mb-3">
                                     <label for="factor" class="form-label">Seleccionar un factor </label>
-                                    <select class="form-select factor" aria-label="Default select example " id="factor">
+                                    <select class="form-select factor" aria-label="Default select example " id="factor_crear">
                                                                               
                                     </select>
                                 </div>
@@ -75,18 +75,21 @@ $dotenv->load();
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <form>
+                            <form id="actualizar_peligro">
                             <div class="mb-3">
                                     <label for="factor" class="form-label">Seleccionar un factor </label>
-                                    <select class="form-select factor" aria-label="Default select example" id="factor">
+                                    <select class="form-select factor" aria-label="Default select example" id="factor_actualizar">
                                                                               
                                     </select>
                                 </div>
                                 <div class="mb-3">
                                     <label for="nombrePeligro" class="form-label">Ingresa un Peligro</label>
-                                    <input type="text" class="form-control" id="nombrePeligro">
+                                    <select class="form-select factor" aria-label="Default select example" 
+                                    id="peligro_actualizar">
+                                                                              
+                                    </select>
                                 </div>
-                                <button id   ="btnCrear"
+                                <button id   ="btnActualizar"
                                         type ="button" 
                                         class="btn btn-primary">Crear</button>
                             </form>
@@ -113,11 +116,15 @@ $dotenv->load();
 
 
 
+     <!-- Variable Entorno Enlace  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
         const URL_ENV = "<?php echo $_ENV['URL'] ?>";
-        console.log(URL_ENV, "eSTA VARIABLE")
-    </script> <!-- Variable Entorno Enlace  -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+       
+        $(document).ready(function() {
+          $('#peligro_actualizar').select2();
+        });
+    </script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <script src="js/all.js"></script>

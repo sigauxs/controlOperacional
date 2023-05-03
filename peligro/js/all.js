@@ -13,11 +13,11 @@ let resultados = '';
 
 /* Menu desplegable */
 
-let   factor = document.getElementById("factor");
+let   factor = document.getElementById("factor_crear");
 const btnCrear = document.getElementById("btnCrear");
 const nombre = document.getElementById('nombrePeligro');
-
-
+const peligro = document.getElementById('peligro_actualizar');
+const actualizar_peligro = document.getElementById("actualizar_peligro");
 
 const fpcd = {
     factor    : 1,
@@ -26,7 +26,7 @@ const fpcd = {
     desviacion: 4
 };
 
-const todosFactoresFetch = async ( tipo, selector ) => {
+const todosFpcdFetch = async ( tipo ) => {
 
     const options = {
         method: "GET",
@@ -38,37 +38,14 @@ const todosFactoresFetch = async ( tipo, selector ) => {
     
       var url = new URL(`${URL_ENV}/api/fpcd/fpcd.php`);
     
-      var params = { tipo: tipo.factor };
+      var params = { tipo: tipo };
 
       url.search = new URLSearchParams(params).toString();
       const response = await fetch(url, options)
       console.log( response )
       const data     = await response.json();  
-      console.log(data);
-      renderSelect( data , selector );
     
-}
-
-const todosPeligrosFetch = async ( tipo, selector ) => {
-
-    const options = {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      };
-    
-    
-      var url = new URL(`${URL_ENV}/api/fpcd/fpcd.php`);
-    
-      var params = { tipo: tipo.peligro };
-
-      url.search = new URLSearchParams(params).toString();
-      const response = await fetch(url, options)
-      console.log( response )
-      const data     = await response.json();  
-      console.log(data);
-      renderSelect( data , selector );
+      return data;
     
 }
 
@@ -120,28 +97,33 @@ const ActualizarPeligro = async ( idFactor,nombre ) => {
 
 function renderSelect(values, selector) {
   
-    const select = document.querySelector(`.${selector}`);
-        
-  
-    $(`${selector} option`).remove();
-  
-    let defaultOption = document.createElement("option");
-    defaultOption.value = "";
-    defaultOption.text = "SELECCIONA UN FACTOR";
-    defaultOption.selected = true;
-    select.appendChild(defaultOption);
-  
-    for (option of values) {
-      const newOption = document.createElement("option");
-      let data = Object.values(option);
-      newOption.value = data[0];
-      newOption.text = data[1];
-      select.appendChild(newOption);
-    }
+  const select = document.querySelector(selector);
+ 
+  $(`${selector} option`).remove();
+
+  for (option of values) {
+    const newOption = document.createElement("option");
+    let data = Object.values(option);
+    newOption.value = data[0];
+    newOption.text = data[1];
+    select.appendChild(newOption);
+  }
 }
 
-todosFactoresFetch(fpcd, factor.id );
-//todosPeligrosFetch(fpcd, )
+
+todosFpcdFetch(fpcd.factor)
+                        .then( (resp ) => 
+                        { 
+                          renderSelect( resp , "#factor_crear");
+                          renderSelect( resp , "#factor_actualizar");
+                        } );
+
+todosFpcdFetch(fpcd.peligro)
+                        .then( (resp ) => 
+                        { 
+                          renderSelect( resp , "#peligro_actualizar");
+                        } );                       
+
 
 
 const on = (element, event, selector, handler) => {
@@ -166,6 +148,14 @@ btnCrear.addEventListener('click', ( e )=>{
 let idForm = 0
 
 
+let ae = document.getElementById("btnActualizar");
+
+ae.addEventListener("click",(e)=>{
+  e.preventDefault();
+  console.log($('#peligro_actualizar').select2().val())
+})
+
+
 on(document, 'click', '.btnEditar', e => { 
 
     const fila = e.target.parentNode.parentNode
@@ -187,7 +177,7 @@ on(document, 'click', '.btnEditar', e => {
 
 
 /* Evento submit para crear o editar */
-btnAcciones.addEventListener('click', (e)=>{
+/*SbtnAcciones.addEventListener('click', (e)=>{
 
     e.preventDefault();  
 
@@ -218,6 +208,6 @@ btnAcciones.addEventListener('click', (e)=>{
       
     }
     modalfpcd.hide()
-})
+})*/
 
 
