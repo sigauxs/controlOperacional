@@ -18,6 +18,7 @@ const btnCrear = document.getElementById("btnCrear");
 const nombre = document.getElementById('nombrePeligro');
 const peligro = document.getElementById('peligro_actualizar');
 const actualizar_peligro = document.getElementById("actualizar_peligro");
+const idPeligro = document.getElementById("idPeligro");
 
 const fpcd = {
     factor    : 1,
@@ -26,7 +27,9 @@ const fpcd = {
     desviacion: 4
 };
 
-const todosFpcdFetch = async ( tipo ) => {
+
+
+const todosFpcdFetch    = async ( tipo ) => {
 
     const options = {
         method: "GET",
@@ -72,7 +75,7 @@ const ingresarPeligro   = async ( idFactor,nombre ) => {
  
 }
 
-const ActualizarPeligro = async ( idFactor,nombre ) => {
+const ActualizarPeligro = async ( idpeligro,nombre ) => {
 
     const options = {
         method: "PUT",
@@ -80,22 +83,34 @@ const ActualizarPeligro = async ( idFactor,nombre ) => {
           "Content-Type": "application/json",
         },
         "body": JSON.stringify({
-            idfactor: idFactor,
+            idpeligro: idpeligro,
             nombre: nombre,
          })
       };
     
-    console.log( options )
+    
       let url         = `${URL_ENV}/api/peligro/actualizar_peligro.php`;
       const response  = await fetch(url, options)
       const respuesta = await response.json();  
         
-      respuesta  == "success"  && location.reload();
+     if (respuesta == "success") {
+
+      Swal.fire({
+        title: 'Peligro Actualizado',     
+        confirmButtonText: 'Ok',
+      }).then((result) => {
+        if (result.isConfirmed) {
+              location.reload();
+        }
+      })
+
+      
+     }  
       
  
 }
 
-function renderSelect(values, selector) {
+const renderSelect      = function (values, selector) {
   
   const select = document.querySelector(selector);
  
@@ -111,18 +126,71 @@ function renderSelect(values, selector) {
 }
 
 
-todosFpcdFetch(fpcd.factor)
+const selector = ( identificador ) => {
+   return document.getElementById(`${ identificador }`);
+}
+
+const factor_actualizar = selector( "factor_actualizar"  );
+const nombrePeligro     = selector( "nombrePeligro_actualizar" );
+const ae                = selector( "btnActualizar" );
+
+/* Cargue menu desplegable e inputs por defecto */
+
+setTimeout(() => { // input idPeligro
+  idPeligro.value = $('#peligro_actualizar').select2().val();
+ }, 500);
+
+
+todosFpcdFetch(fpcd.factor) // M factores
                         .then( (resp ) => 
                         { 
                           renderSelect( resp , "#factor_crear");
+
                           renderSelect( resp , "#factor_actualizar");
                         } );
 
-todosFpcdFetch(fpcd.peligro)
+
+
+todosFpcdFetch(fpcd.peligro) // M Peligros
                         .then( (resp ) => 
                         { 
-                          renderSelect( resp , "#peligro_actualizar");
+                          const factor = selector( "factor_actualizar").value ;
+                          const peligros = resp.filter((peligro)=>{ return peligro.Factor_idFactor == factor })
+                           renderSelect( peligros , "#peligro_actualizar");
                         } );                       
+/* End Cargue menu desplegable e inputs por defecto */
+
+
+/* Eventos para cargar menu e input dinamicamente */
+factor_actualizar.addEventListener("change",()=>{
+  
+  todosFpcdFetch(fpcd.peligro)
+                        .then( (resp ) => 
+                        { 
+                           const factor = selector( "factor_actualizar").value ;
+
+                           const peligros = resp.filter((peligro)=>{ return peligro.Factor_idFactor == factor })
+                           renderSelect( peligros , "#peligro_actualizar");
+                        } );   
+
+                        setTimeout(() => {
+                          idPeligro.value = $('#peligro_actualizar').select2().val();
+                         }, 500);
+
+                        })
+
+
+$('#peligro_actualizar').on( "change", function() {
+
+  
+                          setTimeout(() => {
+                            idPeligro.value = $('#peligro_actualizar').select2().val();
+                           }, 500);
+                           
+                         } );
+/* end Eventos para cargar menu e input dinamicamente */
+
+
 
 
 
@@ -145,14 +213,17 @@ btnCrear.addEventListener('click', ( e )=>{
      
 })
 
-let idForm = 0
-
-
-let ae = document.getElementById("btnActualizar");
 
 ae.addEventListener("click",(e)=>{
   e.preventDefault();
-  console.log($('#peligro_actualizar').select2().val())
+  
+  if( nombrePeligro.value == ""){
+    alert("Ingrese un descripción");
+    return;
+  }
+
+  ActualizarPeligro(idPeligro.value,nombrePeligro.value);
+    
 })
 
 

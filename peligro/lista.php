@@ -77,18 +77,39 @@ $dotenv->load();
                         <div class="accordion-body">
                             <form id="actualizar_peligro">
                             <div class="mb-3">
-                                    <label for="factor" class="form-label">Seleccionar un factor </label>
-                                    <select class="form-select factor" aria-label="Default select example" id="factor_actualizar">
+                                    <label for="factor_actualizar" class="form-label">Seleccionar un factor </label>
+                                    <select class="form-select factor" 
+                                    aria-label="Default select example" 
+                                    id="factor_actualizar">
                                                                               
                                     </select>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="nombrePeligro" class="form-label">Ingresa un Peligro</label>
-                                    <select class="form-select factor" aria-label="Default select example" 
+                                    <label for="peligro_actualizar" class="form-label">Selecciona un peligro</label>
+                                    <select 
+                                    class="form-select factor" 
+                                    aria-label="Default select example" 
                                     id="peligro_actualizar">
                                                                               
                                     </select>
                                 </div>
+
+                                <div class="mb-0">
+                                 
+                                    <input type="hidden" class="form-control" id="idPeligro">
+                                                                              
+                                 
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="nombrePeligro_actualizar" 
+                                           class="form-label">Ingresa un peligro</label>
+                                    <input type="text" class="form-control" id="nombrePeligro_actualizar">
+                                                                              
+                                 
+                                </div>
+
+
                                 <button id   ="btnActualizar"
                                         type ="button" 
                                         class="btn btn-primary">Crear</button>

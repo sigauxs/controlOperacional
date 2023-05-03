@@ -32,7 +32,7 @@ if (!$jsonClient) {
 $sql = "CALL Editar_peligro(:id,:nombre)";
 $stmt = $pdo->prepare($sql);
 
-$stmt->bindValue(':id',    $jsonClient->idfactor);
+$stmt->bindValue(':id',    $jsonClient->idpeligro);
 $stmt->bindValue(':nombre',$jsonClient->nombre);
 
 if ($stmt->execute()) {
