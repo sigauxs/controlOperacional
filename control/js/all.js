@@ -138,30 +138,26 @@ const ae                = selector( "btnActualizar" );
 
 setTimeout(() => { // input idPeligro
   idPeligro.value = $('#peligro_actualizar').select2().val();
- }, 300);
+ }, 500);
 
 
 todosFpcdFetch(fpcd.factor) // M factores
                         .then( (resp ) => 
                         { 
                           renderSelect( resp , "#factor_crear");
-                          renderSelect( resp , "#factor_actualizar");
-                          
 
-                        todosFpcdFetch(fpcd.peligro) // M Peligros
+                          renderSelect( resp , "#factor_actualizar");
+                        } );
+
+
+
+todosFpcdFetch(fpcd.peligro) // M Peligros
                         .then( (resp ) => 
                         { 
                           const factor = selector( "factor_actualizar").value ;
                           const peligros = resp.filter((peligro)=>{ return peligro.Factor_idFactor == factor })
                            renderSelect( peligros , "#peligro_actualizar");
-                        } ); 
-
-
-                        } );
-
-
-
-                      
+                        } );                       
 /* End Cargue menu desplegable e inputs por defecto */
 
 
