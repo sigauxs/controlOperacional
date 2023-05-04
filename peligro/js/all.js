@@ -138,7 +138,7 @@ const ae                = selector( "btnActualizar" );
 
 setTimeout(() => { // input idPeligro
   idPeligro.value = $('#peligro_actualizar').select2().val();
- }, 300);
+ }, 1000);
 
 
 todosFpcdFetch(fpcd.factor) // M factores
@@ -146,19 +146,20 @@ todosFpcdFetch(fpcd.factor) // M factores
                         { 
                           renderSelect( resp , "#factor_crear");
                           renderSelect( resp , "#factor_actualizar");
-                          
 
-                        todosFpcdFetch(fpcd.peligro) // M Peligros
+
+                        
+
+                        } );
+
+todosFpcdFetch(fpcd.peligro) // M Peligros
                         .then( (resp ) => 
                         { 
                           const factor = selector( "factor_actualizar").value ;
                           const peligros = resp.filter((peligro)=>{ return peligro.Factor_idFactor == factor })
+                          console.log( peligros )
                            renderSelect( peligros , "#peligro_actualizar");
                         } ); 
-
-
-                        } );
-
 
 
                       
