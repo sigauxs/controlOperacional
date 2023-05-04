@@ -30,10 +30,10 @@ if($method ==  "POST"){
     }
 
 
-    $sql = "CALL Insertar_peligro(:idfactor,:nombre)";
+    $sql = "CALL insertar_control(:descripcion,:idpeligro,:idjerarquia)";
     $stmt = $pdo->prepare($sql);
-    $stmt->bindValue(':idfactor', $jsonClient->idfactor );
-    $stmt->bindValue(':nombre',   $jsonClient->nombre );
+    $stmt->bindValue(':descripcion', $jsonClient->nombre );
+    $stmt->bindValue(':idpeligro',   $jsonClient->idpeligro );
 
     if ($stmt->execute()) {
             header("HTTP/1.1 201 ok");

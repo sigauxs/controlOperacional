@@ -1,24 +1,7 @@
+const idPeligro_control = document.getElementById("idpeligro_control");
+const btnCrear          = document.getElementById("btnCrear");
 
 /*Variables para identificar el dom */
-const modalfpcd = new bootstrap.Modal(document.getElementById('modalFactor'))
-const formFactor  = document.querySelector('form');
-const btnAcciones = document.getElementById('btnAcciones');
-const contenedor  = document.querySelector('tbody');
-
-const estado = document.getElementById('estado');
-const id = document.getElementById('id');
-let formAction = document.getElementById('formFactor');
-var opcion = ''
-let resultados = '';
-
-/* Menu desplegable */
-
-let   factor = document.getElementById("factor_crear");
-const btnCrear = document.getElementById("btnCrear");
-const nombre = document.getElementById('nombrePeligro');
-const peligro = document.getElementById('peligro_actualizar');
-const actualizar_peligro = document.getElementById("actualizar_peligro");
-const idPeligro = document.getElementById("idPeligro");
 
 const fpcd = {
     factor    : 1,
@@ -29,6 +12,7 @@ const fpcd = {
 
 
 
+/* Peticiones HTTP */
 const todosFpcdFetch    = async ( tipo ) => {
 
     const options = {
@@ -72,64 +56,10 @@ const jerarquias = async () => {
   return data;
 }
 
-const ingresarPeligro   = async ( idFactor,nombre ) => {
+/* End Peticiones HTTP */
 
-    const options = {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        "body": JSON.stringify({
-            idfactor: idFactor,
-            nombre  : nombre,
-         })
-      };
-    
-    
-      let url         = `${URL_ENV}/api/peligro/insertar_peligro.php`;
-      const response  = await fetch(url, options)
-      const respuesta = await response.json();  
-        
-      respuesta  == "success"  && location.reload();
-      
- 
-}
 
-const ActualizarPeligro = async ( idpeligro,nombre ) => {
-
-    const options = {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        "body": JSON.stringify({
-            idpeligro: idpeligro,
-            nombre: nombre,
-         })
-      };
-    
-    
-      let url         = `${URL_ENV}/api/peligro/actualizar_peligro.php`;
-      const response  = await fetch(url, options)
-      const respuesta = await response.json();  
-        
-     if (respuesta == "success") {
-
-      Swal.fire({
-        title: 'Peligro Actualizado',     
-        confirmButtonText: 'Ok',
-      }).then((result) => {
-        if (result.isConfirmed) {
-              location.reload();
-        }
-      })
-
-      
-     }  
-      
- 
-}
-
+/*  funcion para renderizar select */
 const renderSelect      = function (values, selector) {
   
   const select = document.querySelector(selector);
@@ -144,176 +74,113 @@ const renderSelect      = function (values, selector) {
     select.appendChild(newOption);
   }
 }
+/*  end funcion para renderizar select */
 
 
+
+/* Utilidades */
 const selector = ( identificador ) => {
    return document.getElementById(`${ identificador }`);
 }
-
-const factor_actualizar = selector( "factor_actualizar"  );
-const nombrePeligro     = selector( "nombrePeligro_actualizar" );
-const ae                = selector( "btnActualizar" );
-
-/* Cargue menu desplegable e inputs por defecto */
-
-setTimeout(() => { // input idPeligro
-  idPeligro.value = $('#peligro_actualizar').select2().val();
- }, 1000);
+/* Utilidades */
 
 
-jerarquias()
-            .then( ( resp ) => 
-            {
-              renderSelect( resp , "#jerarquia")
-            })
+/* Variables */
+
+const factor_crearControl  = selector( "factor_crearControl"  );
+const peligro_crearControl = selector( "peligro_crearControl" );
+const jerarquia            = selector( "jerarquia" );
+const nombreControl        = selector( "nombreControl" );
+
+/* end variables  */
 
 
-todosFpcdFetch(fpcd.factor) // M factores
-                        .then( (resp ) => 
-                        { 
-                          renderSelect( resp , "#factor_crear");
-                          renderSelect( resp , "#factor_actualizar");
+/* Cargas de Menus */
 
 
-                        
+todosFpcdFetch( fpcd.factor ) //Factor
+                            .then( (resp) => {
+                                       renderSelect( resp , "#factor_crearControl" ); 
+                            }
+                            )
 
-                        } );
-
-todosFpcdFetch(fpcd.peligro) // M Peligros
-                        .then( (resp ) => 
-                        { 
-                          setTimeout(() => {
-                            const factor = selector( "factor_actualizar").value ;
-                            const peligros = resp.filter((peligro)=>{ return peligro.Factor_idFactor == factor })
-                            console.log( peligros )
-                             renderSelect( peligros , "#peligro_crearControl");
-                          }, 350);
-                        
-                        } ); 
-
-
-                      
-/* End Cargue menu desplegable e inputs por defecto */
+todosFpcdFetch( fpcd.peligro ) //Peligro
+                            .then( (resp) => {
+                              setTimeout(() => {
+                                const factor_crearControl   = selector( "factor_crearControl").value ;
+                                const peligros_crearControl = resp.filter((peligro)=>{ return peligro.Factor_idFactor == factor_crearControl })
+                                
+                                 renderSelect( peligros_crearControl , "#peligro_crearControl");
+                              }, 500);
+                            }
+                            )
 
 
-/* Eventos para cargar menu e input dinamicamente */
-factor_actualizar.addEventListener("change",()=>{
+jerarquias() // Jerarquia
+          .then( (jerarquias) => {
+
+            renderSelect( jerarquias,"#jerarquia" )
+
+          } )
+
+
+const ingresarControl  = async ( idpeligro,idjerarquia,nombreControl ) => {
+
+            const options = {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                "body": JSON.stringify({
+                    idpeligro  : idpeligro,
+                    idjerarquia: idjerarquia,
+                    nombre     : nombreControl,
+                 })
+              };
+            
+            
+              let url         = `${URL_ENV}/api/control/insertar_control.php`;
+              const response  = await fetch(url, options)
+              const respuesta = await response.json();  
+                
+              respuesta  == "success"  && location.reload();
+              
+         
+}
+        
+
+/* End carga de Menus */
+
+
+factor_crearControl.addEventListener("change",()=>{
   
   todosFpcdFetch(fpcd.peligro)
-                        .then( (resp ) => 
-                        { 
-                           const factor = selector( "factor_actualizar").value ;
+                            .then( (resp) => {
+                              setTimeout(() => {
+                                const factor_crearControl   = selector( "factor_crearControl").value ;
+                                const peligros_crearControl = resp.filter((peligro)=>{ return peligro.Factor_idFactor == factor_crearControl })
+                                
+                                 renderSelect( peligros_crearControl , "#peligro_crearControl");
+                              }, 350);
+                            }
+                            ) 
 
-                           const peligros = resp.filter((peligro)=>{ return peligro.Factor_idFactor == factor })
-                           renderSelect( peligros , "#peligro_actualizar");
-                        } );   
-
-                        setTimeout(() => {
-                          idPeligro.value = $('#peligro_crearControl').select2().val();
-                         }, 500);
-
+                           
                         })
 
 
-$('#peligro_actualizar').on( "change", function() {
-
-  
-                          setTimeout(() => {
-                            idPeligro.value = $('#peligro_crearControl').select2().val();
-                           }, 500);
-                           
-                         } );
-/* end Eventos para cargar menu e input dinamicamente */
-
-
-
-
-
-const on = (element, event, selector, handler) => {
-
-    element.addEventListener(event, e => {
-        if(e.target.closest(selector)){
-            handler(e)
-        }
-    })
-}
-
-
-
-/* Boton crear para llamar modal en blanco */
 btnCrear.addEventListener('click', ( e )=>{
-     e.preventDefault();
-     console.log( factor.value, nombre.value )
-     ingresarPeligro( factor.value , nombre.value );
-     
-})
-
-
-ae.addEventListener("click",(e)=>{
-  e.preventDefault();
+                      e.preventDefault();
+                       /*console.log(
+                       peligro_crearControl.value,
+                       jerarquia.value              ,         
+                       nombreControl.value  );   */                
+                      if(nombreControl.value == ""){     
+                        alert("Ingrese un descripcion")
+                        return
+                      }
   
-  if( nombrePeligro.value == ""){
-    alert("Ingrese un descripción");
-    return;
-  }
-
-  ActualizarPeligro(idPeligro.value,nombrePeligro.value);
-    
-})
-
-
-on(document, 'click', '.btnEditar', e => { 
-
-    const fila = e.target.parentNode.parentNode
-    idForm = fila.children[0].innerHTML
-    const nombreForm = fila.children[1].innerHTML
-
-    nombre.value =  nombreForm;
-    id.value = idForm;
-
-    console.log(idForm);
-    
-    formAction.action = `${URL_ENV}/server/actualizarEmpresas.php`;
-    opcion = 'editar'
-    modalfpcd.show();
-
-    
-     
-})
-
-
-/* Evento submit para crear o editar */
-/*SbtnAcciones.addEventListener('click', (e)=>{
-
-    e.preventDefault();  
-
- 
-    const accion = {
-        crear : Symbol(),
-        editar: Symbol()
-    }
-    
-    
-
-    if( opcion == "crear"){        
-
-       
-       ingresarFactor( nombre.value );
-
-       
-    };
-
-    if(opcion=='editar'){    
-        //console.log('OPCION EDITAR')
-        console.log(idForm);
-        console.log(nombre.value);
-    
-
-
-        ActualizarFactor(idForm,nombre.value);
-      
-    }
-    modalfpcd.hide()
-})*/
-
-
+                      console.log(peligro_crearControl.value , jerarquia.value , nombreControl.value)
+                     //ingresarControl( peligro_crearControl.value , jerarquia.value , nombreControl.value );
+                          
+})                       

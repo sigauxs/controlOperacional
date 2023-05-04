@@ -44,7 +44,7 @@ $dotenv->load();
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Crear peligro
+                            Crear Control
                         </button>
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
@@ -52,7 +52,9 @@ $dotenv->load();
                         <form>
                                 <div class="mb-3">
                                     <label for="factor" class="form-label">Seleccionar un factor </label>
-                                    <select class="form-select factor" aria-label="Default select example " id="factor_crear">
+                                    <select class="form-select factor" 
+                                    aria-label="Default select example " 
+                                    id="factor_crearControl">
                                                                               
                                     </select>
                                 </div>
@@ -81,6 +83,8 @@ $dotenv->load();
                                     <label for="nombreControl" class="form-label">Ingresa un Control</label>
                                     <input type="text" class="form-control" id="nombreControl">
                                 </div>
+
+
                                 <button id   ="btnCrear"
                                         type ="button" 
                                         class="btn btn-primary">Crear</button>
