@@ -35,7 +35,7 @@ $dotenv->load();
     <div class="container">
         <div class="row">
             <div class="col-md-12 title-sm">
-                <h2 class="text-center encabezado_listado fw-bolder mt-5">Gestionar Peligro </h2>
+                <h2 class="text-center encabezado_listado fw-bolder mt-5">Gestionar Control</h2>
                 <hr class="hr_red mx-auto">
                 <br>
             </div>
@@ -56,9 +56,30 @@ $dotenv->load();
                                                                               
                                     </select>
                                 </div>
+
                                 <div class="mb-3">
-                                    <label for="nombrePeligro" class="form-label">Ingresa un Peligro</label>
-                                    <input type="text" class="form-control" id="nombrePeligro">
+                                    <label for="peligro_crearControl" class="form-label">Selecciona un peligro</label>
+                                    <select 
+                                    class="form-select factor" 
+                                    aria-label="Default select example" 
+                                    id="peligro_crearControl">
+                                                                              
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="jerarquia" class="form-label">Selecciona una Jerarquia</label>
+                                    <select 
+                                    class="form-select factor" 
+                                    aria-label="Default select example" 
+                                    id="jerarquia">                                  
+                                    </select>
+                                </div>
+
+
+                                <div class="mb-3">
+                                    <label for="nombreControl" class="form-label">Ingresa un Control</label>
+                                    <input type="text" class="form-control" id="nombreControl">
                                 </div>
                                 <button id   ="btnCrear"
                                         type ="button" 
@@ -67,6 +88,8 @@ $dotenv->load();
                         </div>
                     </div>
                 </div>
+
+                
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingTwo">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">

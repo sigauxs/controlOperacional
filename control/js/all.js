@@ -52,6 +52,26 @@ const todosFpcdFetch    = async ( tipo ) => {
     
 }
 
+const jerarquias = async () => {
+  const options = {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  };
+
+
+  var url = new URL(`${URL_ENV}/api/jerarquia.php`);
+
+
+
+  const response = await fetch(url, options)
+  console.log( response )
+  const data     = await response.json();  
+
+  return data;
+}
+
 const ingresarPeligro   = async ( idFactor,nombre ) => {
 
     const options = {
@@ -138,26 +158,41 @@ const ae                = selector( "btnActualizar" );
 
 setTimeout(() => { // input idPeligro
   idPeligro.value = $('#peligro_actualizar').select2().val();
- }, 500);
+ }, 1000);
+
+
+jerarquias()
+            .then( ( resp ) => 
+            {
+              renderSelect( resp , "#jerarquia")
+            })
 
 
 todosFpcdFetch(fpcd.factor) // M factores
                         .then( (resp ) => 
                         { 
                           renderSelect( resp , "#factor_crear");
-
                           renderSelect( resp , "#factor_actualizar");
+
+
+                        
+
                         } );
-
-
 
 todosFpcdFetch(fpcd.peligro) // M Peligros
                         .then( (resp ) => 
                         { 
-                          const factor = selector( "factor_actualizar").value ;
-                          const peligros = resp.filter((peligro)=>{ return peligro.Factor_idFactor == factor })
-                           renderSelect( peligros , "#peligro_actualizar");
-                        } );                       
+                          setTimeout(() => {
+                            const factor = selector( "factor_actualizar").value ;
+                            const peligros = resp.filter((peligro)=>{ return peligro.Factor_idFactor == factor })
+                            console.log( peligros )
+                             renderSelect( peligros , "#peligro_crearControl");
+                          }, 350);
+                        
+                        } ); 
+
+
+                      
 /* End Cargue menu desplegable e inputs por defecto */
 
 
@@ -174,7 +209,7 @@ factor_actualizar.addEventListener("change",()=>{
                         } );   
 
                         setTimeout(() => {
-                          idPeligro.value = $('#peligro_actualizar').select2().val();
+                          idPeligro.value = $('#peligro_crearControl').select2().val();
                          }, 500);
 
                         })
@@ -184,7 +219,7 @@ $('#peligro_actualizar').on( "change", function() {
 
   
                           setTimeout(() => {
-                            idPeligro.value = $('#peligro_actualizar').select2().val();
+                            idPeligro.value = $('#peligro_crearControl').select2().val();
                            }, 500);
                            
                          } );
