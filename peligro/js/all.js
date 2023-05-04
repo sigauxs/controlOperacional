@@ -155,10 +155,13 @@ todosFpcdFetch(fpcd.factor) // M factores
 todosFpcdFetch(fpcd.peligro) // M Peligros
                         .then( (resp ) => 
                         { 
-                          const factor = selector( "factor_actualizar").value ;
-                          const peligros = resp.filter((peligro)=>{ return peligro.Factor_idFactor == factor })
-                          console.log( peligros )
-                           renderSelect( peligros , "#peligro_actualizar");
+                          setTimeout(() => {
+                            const factor = selector( "factor_actualizar").value ;
+                            const peligros = resp.filter((peligro)=>{ return peligro.Factor_idFactor == factor })
+                            console.log( peligros )
+                             renderSelect( peligros , "#peligro_actualizar");
+                          }, 500);
+                        
                         } ); 
 
 
