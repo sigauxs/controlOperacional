@@ -29,6 +29,7 @@ if($method ==  "POST"){
         exit("No day datos para ingresar");
     }
 
+    //Gestionar control
 
     $sql = "CALL insertar_control(:descripcion,:idpeligro,:idjerarquia)";
     $stmt = $pdo->prepare($sql);
