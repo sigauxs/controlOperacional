@@ -97,7 +97,7 @@ $dotenv->load();
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingTwo">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Actualizar peligro
+                            Actualizar Control
                         </button>
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
@@ -123,6 +123,15 @@ $dotenv->load();
                                 </div>
 
                                 <div class="mb-3">
+                                    <label for="control" class="form-label">Selecciona una control</label>
+                                    <select 
+                                    class="form-select factor" 
+                                    aria-label="Default select example" 
+                                    id="control">                                  
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
                                     <label for="jerarquiaId" class="form-label">Selecciona una Jerarquia</label>
                                     <select 
                                     class="form-select factor" 
@@ -131,14 +140,7 @@ $dotenv->load();
                                     </select>
                                 </div>
 
-                                <div class="mb-3">
-                                    <label for="control" class="form-label">Selecciona una control</label>
-                                    <select 
-                                    class="form-select factor" 
-                                    aria-label="Default select example" 
-                                    id="control">                                  
-                                    </select>
-                                </div>
+                             
 
 
                                 <div class="mb-3">

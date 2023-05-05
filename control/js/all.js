@@ -29,7 +29,7 @@ const todosFpcdFetch    = async ( tipo ) => {
 
       url.search = new URLSearchParams(params).toString();
       const response = await fetch(url, options)
-      console.log( response )
+   
       const data     = await response.json();  
     
       return data;
@@ -50,7 +50,7 @@ const jerarquias = async () => {
 
 
   const response = await fetch(url, options)
-  console.log( response )
+ 
   const data     = await response.json();  
 
   return data;
@@ -95,7 +95,8 @@ const jerarquia            = selector( "jerarquia" );
 const jerarquiaId            = selector( "jerarquiaId" );
 const nombreControl        = selector( "nombreControl" );
 const control = selector("control");
-let jerarquiaControl = "";
+let   jerarquiaControl = "";
+var  controles = []; 
 
 /* end variables  */
 
@@ -115,7 +116,7 @@ todosFpcdFetch( fpcd.peligro ) //Peligro
                               setTimeout(() => {
                                 const factor_crearControl      =  selector( "factor_crearControl").value ;
                                 const factor_actualizarControl =  selector( "factor_actualizarControl" ).value ;
-                                const peligros_crearControl = resp.filter((peligro)=>{ return peligro.Factor_idFactor == factor_crearControl });
+                                const peligros_crearControl    =  resp.filter((peligro)=>{ return peligro.Factor_idFactor == factor_crearControl });
                                 const peligros_actualizarControl = resp.filter((peligro)=>{ return peligro.Factor_idFactor == factor_actualizarControl });
                                 
                                  renderSelect( peligros_crearControl , "#peligro_crearControl");
@@ -129,10 +130,10 @@ todosFpcdFetch( fpcd.control ) //control
                               setTimeout(() => {
                                 
                                  
-                                 const control =  controles.filter((control)=>{ return control.Peligro_idPeligro == peligro_actualizarControl.value });
+                               const control =  controles.filter((control)=>{ return control.Peligro_idPeligro == peligro_actualizarControl.value });
                                 
-                             
-                                 console.log( control.shift() );
+                                const primerItem =  [...control];
+                          
                                  renderSelect( control , "#control");
                                  
                               
@@ -142,9 +143,7 @@ todosFpcdFetch( fpcd.control ) //control
                             }
                             )
                             
-setTimeout(() => {
 
-}, 600);
 
 jerarquias() // Jerarquia
           .then( (jerarquias) => {
@@ -171,11 +170,11 @@ const ingresarControl  = async ( idpeligro,idjerarquia,nombreControl ) => {
             
             
               let url         = `${URL_ENV}/api/control/insertar_control.php`;
-              console.log( url )
+              
               const response  = await fetch(url, options)
-              console.log( response )
+         
               const respuesta = await response.json();
-              console.log( respuesta )  
+             
                 
               respuesta  == "success"  && location.reload();
               
@@ -192,14 +191,9 @@ factor_crearControl.addEventListener("change",()=>{
                             .then( (resp) => {
                               setTimeout(() => {
                                 const factor_crearControl   = selector( "factor_crearControl").value ;
-                                const factor_actualizarControl =  selector( "factor_actualizarControl" ).value ;
-
                                 const peligros_crearControl = resp.filter((peligro)=>{ return peligro.Factor_idFactor == factor_crearControl })
-                                const peligros_actualizarControl = resp.filter((peligro)=>{ return peligro.Factor_idFactor == factor_actualizarControl });
-
-
                                  renderSelect( peligros_crearControl , "#peligro_crearControl");
-                                 renderSelect( peligros_actualizarControl , "#peligro_actualizarControl");
+                                 renderSelect()
                               }, 350);
                             }
                             ) 
@@ -210,20 +204,95 @@ factor_crearControl.addEventListener("change",()=>{
 factor_actualizarControl.addEventListener("change",()=>{
   
                           todosFpcdFetch(fpcd.peligro)
-                                                    .then( (resp) => {
-                                                      setTimeout(() => {
-                                                      
-                                                        const factor_actualizarControl =  selector( "factor_actualizarControl" ).value ;
-                                                        const peligros_actualizarControl = resp.filter((peligro)=>{ return peligro.Factor_idFactor == factor_actualizarControl });
-                                                         renderSelect( peligros_actualizarControl , "#peligro_actualizarControl");
-                                                      }, 350);
-                                                    }
-                                                    ) 
+                            .then( (resp) => {
+
+                              const factor_actualizarControl =  selector( "factor_actualizarControl" ).value ;
+                              const peligros_actualizarControl = resp.filter((peligro)=>{ return peligro.Factor_idFactor == factor_actualizarControl });
+                              renderSelect( peligros_actualizarControl , "#peligro_actualizarControl");
+                                                  
+                            })
+
+                          todosFpcdFetch( fpcd.control ) //control
+                            .then( (controles) => {
+                              setTimeout(() => {
+                    
+                     
+                            const controlesFiltrados =  controles.filter(
+                                                (control)=>{ 
+                                                  return control.Peligro_idPeligro == peligro_actualizarControl.value
+                                                });
+                                
+                            const primerItem =  [...controlesFiltrados];
+                            console.log( controlesFiltrados );
+                            controles = controlesFiltrados;
+                           
+                            jerarquiaId.value = primerItem[0].Jerarquia_idJerarquia;
+                            
+                            
+                            renderSelect( controlesFiltrados , "#control");
+                                         
+                                 }, 500); });
                         
                                                    
                   })
 
 
+peligro_actualizarControl.addEventListener("change",()=>{
+                todosFpcdFetch( fpcd.control ) //control
+                            .then( (controles) => {
+                              setTimeout(() => {
+                    
+                     
+                            const controlesFiltrados =  controles.filter((control)=>{ return control.Peligro_idPeligro == peligro_actualizarControl.value });
+                                
+                            const primerItem =  [...controlesFiltrados];
+                            console.log( controlesFiltrados );
+                            controles = controlesFiltrados;
+                           
+                            jerarquiaId.value = primerItem[0].Jerarquia_idJerarquia;
+                            
+                            
+                            renderSelect( controlesFiltrados , "#control");
+                                         
+                  }, 500);
+                }
+                )
+
+                console.log( controles )
+                  })
+
+                          
+
+control.addEventListener("change",()=>{
+
+  todosFpcdFetch( fpcd.control ) //control
+  .then( (controles) => {
+    setTimeout(() => {
+
+
+      console.log(control.value);
+
+  const controlesFiltrados =  controles.filter((control)=>{ return control.Peligro_idPeligro == peligro_actualizarControl.value });
+      
+  const primerItem =  [...controlesFiltrados];
+  controles = controlesFiltrados;
+
+  controlesFiltrados.forEach( (element) => { 
+        if(control.value == element.idControl){
+          jerarquiaId.value = element.Jerarquia_idJerarquia;
+        }
+  });
+ 
+  
+  
+  console.log
+               
+}, 500);
+}
+)
+
+
+})                  
 
 
 
