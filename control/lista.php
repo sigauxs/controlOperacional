@@ -102,44 +102,54 @@ $dotenv->load();
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <form id="actualizar_peligro">
-                            <div class="mb-3">
-                                    <label for="factor_actualizar" class="form-label">Seleccionar un factor </label>
+                        <form>
+                                <div class="mb-3">
+                                    <label for="factor" class="form-label">Seleccionar un factor </label>
                                     <select class="form-select factor" 
-                                    aria-label="Default select example" 
-                                    id="factor_actualizar">
+                                    aria-label="Default select example " 
+                                    id="factor_actualizarControl">
                                                                               
                                     </select>
                                 </div>
+
                                 <div class="mb-3">
-                                    <label for="peligro_actualizar" class="form-label">Selecciona un peligro</label>
+                                    <label for="peligro_actualizarControl" class="form-label">Selecciona un peligro</label>
                                     <select 
                                     class="form-select factor" 
                                     aria-label="Default select example" 
-                                    id="peligro_actualizar">
+                                    id="peligro_actualizarControl">
                                                                               
                                     </select>
                                 </div>
 
-                                <div class="mb-0">
-                                 
-                                    <input type="hidden" class="form-control" id="idPeligro">
-                                                                              
-                                 
+                                <div class="mb-3">
+                                    <label for="jerarquiaId" class="form-label">Selecciona una Jerarquia</label>
+                                    <select 
+                                    class="form-select factor" 
+                                    aria-label="Default select example" 
+                                    id="jerarquiaId">                                  
+                                    </select>
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="nombrePeligro_actualizar" 
-                                           class="form-label">Ingresa un peligro</label>
-                                    <input type="text" class="form-control" id="nombrePeligro_actualizar">
-                                                                              
-                                 
+                                    <label for="control" class="form-label">Selecciona una control</label>
+                                    <select 
+                                    class="form-select factor" 
+                                    aria-label="Default select example" 
+                                    id="control">                                  
+                                    </select>
+                                </div>
+
+
+                                <div class="mb-3">
+                                    <label for="nombreControl" class="form-label">Ingresa un Control</label>
+                                    <input type="text" class="form-control" id="nombreControl">
                                 </div>
 
 
                                 <button id   ="btnActualizar"
                                         type ="button" 
-                                        class="btn btn-primary">Crear</button>
+                                        class="btn btn-primary">Actualizar</button>
                             </form>
                         </div>
                     </div>
