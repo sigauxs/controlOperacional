@@ -9,7 +9,7 @@ include("../components/header.php");
 
 require "../connection/connection.php";
 $url_count = strlen(__DIR__);
-$url = substr(__DIR__, 0, ($url_count - 7));
+$url = substr(__DIR__, 0, ($url_count - 12));
 require  $url . '/vendor/autoload.php';
 
 
@@ -35,7 +35,7 @@ $dotenv->load();
     <div class="container">
         <div class="row">
             <div class="col-md-12 title-sm">
-                <h2 class="text-center encabezado_listado fw-bolder mt-5">Gestionar Control</h2>
+                <h2 class="text-center encabezado_listado fw-bolder mt-5">Gestionar Desviaciones</h2>
                 <hr class="hr_red mx-auto">
                 <br>
             </div>
@@ -44,44 +44,59 @@ $dotenv->load();
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Crear Control
+                            Crear desviaciones
                         </button>
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                         <form>
                                 <div class="mb-3">
-                                    <label for="factor" class="form-label">Seleccionar un factor </label>
+                                    <label for="factor_crearDesviaciones" class="form-label">Seleccionar un factor </label>
                                     <select class="form-select factor" 
                                     aria-label="Default select example " 
-                                    id="factor_crearControl">
+                                    id="factor_crearDesviaciones">
                                                                               
                                     </select>
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="peligro_crearControl" class="form-label">Selecciona un peligro</label>
+                                    <label for="peligro_crearDesviaciones" class="form-label">Selecciona un peligro</label>
                                     <select 
                                     class="form-select factor" 
                                     aria-label="Default select example" 
-                                    id="peligro_crearControl">
+                                    id="peligro_crearDesviaciones">
                                                                               
                                     </select>
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="jerarquia" class="form-label">Selecciona una Jerarquia</label>
+                                    <label for="control_crearDesviaciones" class="form-label">Selecciona un control</label>
                                     <select 
                                     class="form-select factor" 
                                     aria-label="Default select example" 
-                                    id="jerarquia">                                  
+                                    id="control_crearDesviaciones">
+                                                                              
                                     </select>
                                 </div>
 
 
                                 <div class="mb-3">
-                                    <label for="nombreControl" class="form-label">Ingresa un Control</label>
-                                    <input type="text" class="form-control" id="nombreControl">
+                                    <label for="tipoDesviacion" class="form-label">Selecciona un tipo de desviacion</label>
+                                    <select 
+                                    class="form-select factor" 
+                                    aria-label="Default select example" 
+                                    id="tipoDesviacion">
+                                    <option value="N">Negativo</option>
+                                    <option value="P">Positivo</option>                                      
+                                    </select>
+                                </div>
+
+                             
+
+
+                                <div class="mb-3">
+                                    <label for="nombreDesviacion" class="form-label">Ingresa una desviacion</label>
+                                    <input type="text" class="form-control" id="nombreDesviacion">
                                 </div>
 
 
@@ -97,7 +112,7 @@ $dotenv->load();
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingTwo">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Actualizar Control
+                            Actualizar desviaciones
                         </button>
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">

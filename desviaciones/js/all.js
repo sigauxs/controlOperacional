@@ -36,25 +36,6 @@ const todosFpcdFetch    = async ( tipo ) => {
     
 }
 
-const jerarquias = async () => {
-  const options = {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
-  };
-
-
-  var url = new URL(`${URL_ENV}/api/jerarquia.php`);
-
-
-
-  const response = await fetch(url, options)
- 
-  const data     = await response.json();  
-
-  return data;
-}
 
 /* End Peticiones HTTP */
 
@@ -89,8 +70,10 @@ const selector = ( identificador ) => {
 
 /* Variables */
 
-const factor_crearControl       = selector( "factor_crearControl"  );
-const peligro_crearControl      = selector( "peligro_crearControl" );
+const factor_crearDesviaciones    = selector( "factor_crearDesviaciones"  );
+const peligro_crearDesviaciones   = selector( "peligro_crearDesviaciones" );
+const control_crearDesviaciones   = selector( "control_crearDesviaciones" );
+
 const factor_actualizarControl  = selector( "factor_actualizarControl" );
 const peligro_actualizarControl = selector( "peligro_actualizarControl" );
 const jerarquia                 = selector( "jerarquia" );
@@ -113,7 +96,7 @@ function sameName(){
 
 todosFpcdFetch( fpcd.factor ) //Factor
                             .then( (resp) => {
-                                       renderSelect( resp , "#factor_crearControl" ); 
+                                       renderSelect( resp , "#factor_crearDesviaciones" ); 
                                        renderSelect( resp , "#factor_actualizarControl" ); 
                             }
                             )
@@ -121,12 +104,12 @@ todosFpcdFetch( fpcd.factor ) //Factor
 todosFpcdFetch( fpcd.peligro ) //Peligro
                             .then( (resp) => {
                               setTimeout(() => {
-                                const factor_crearControl      =  selector( "factor_crearControl").value ;
+                                const factor_crearDesviacion     =  selector( "factor_crearDesviaciones").value ;
                                 const factor_actualizarControl =  selector( "factor_actualizarControl" ).value ;
-                                const peligros_crearControl    =  resp.filter((peligro)=>{ return peligro.Factor_idFactor == factor_crearControl });
+                                const peligros_crearDesviaciones  =  resp.filter((peligro)=>{ return peligro.Factor_idFactor == factor_crearDesviacion });
                                 const peligros_actualizarControl = resp.filter((peligro)=>{ return peligro.Factor_idFactor == factor_actualizarControl });
                                 
-                                 renderSelect( peligros_crearControl , "#peligro_crearControl");
+                                 renderSelect( peligros_crearDesviaciones , "#peligro_crearDesviaciones");
                                  renderSelect( peligros_actualizarControl , "#peligro_actualizarControl");
                               }, 400);
                             }
@@ -137,11 +120,11 @@ todosFpcdFetch( fpcd.control ) //control
                               setTimeout(() => {
                                 
                                  
-                               const control =  controles.filter((control)=>{ return control.Peligro_idPeligro == peligro_actualizarControl.value });
+                               const control     =  controles.filter((control)=>{ return control.Peligro_idPeligro == peligro_crearDesviaciones.value });
                                 
                                 const primerItem =  [...control];
                           
-                                 renderSelect( control , "#control");
+                                 renderSelect( control , "#control_crearDesviaciones");
                                  
                               
 
@@ -152,20 +135,6 @@ todosFpcdFetch( fpcd.control ) //control
                             
 
 
-jerarquias() // Jerarquia
-          .then( (jerarquias) => {
-
-            renderSelect( jerarquias,"#jerarquia" );
-            renderSelect( jerarquias,"#jerarquiaId" )
-
-          } ).then(
-            todosFpcdFetch(fpcd.control)
-                .then( (controles) => {
-                  const firstcontrol = controles[0];
-                  
-                  jerarquiaId.value = firstcontrol.Jerarquia_idJerarquia;
-                })
-          );
 
 
 const ingresarControl  = async ( idpeligro,idjerarquia,nombreControl ) => {
@@ -240,19 +209,37 @@ $(document).ready(function() {
 
 
 
-factor_crearControl.addEventListener("change",()=>{
+factor_crearDesviaciones.addEventListener("change",()=>{
   
   todosFpcdFetch(fpcd.peligro)
                             .then( (resp) => {
                               setTimeout(() => {
-                                const factor_crearControl   = selector( "factor_crearControl").value ;
-                                const peligros_crearControl = resp.filter((peligro)=>{ return peligro.Factor_idFactor == factor_crearControl })
-                                 renderSelect( peligros_crearControl , "#peligro_crearControl");
-                                 renderSelect()
+                                const factor_crearDesviacion     =  selector( "factor_crearDesviaciones").value ;
+                                const peligros_crearDesviaciones   =  resp.filter((peligro)=>{ return peligro.Factor_idFactor == factor_crearDesviacion });
+                                 renderSelect( peligros_crearDesviaciones , "#peligro_crearDesviaciones");
+                                
                               }, 350);
                             }
-                            ) 
-
+                            )
+  todosFpcdFetch( fpcd.control ) //control
+                            .then( (controles) => {
+                              setTimeout(() => {
+                    
+                     
+                            const controlesFiltrados =  controles.filter(
+                                                (control)=>{ 
+                                                  return control.Peligro_idPeligro == control_crearDesviaciones.value
+                                                });
+                                
+                            const primerItem =  [...controlesFiltrados];
+                            console.log( controlesFiltrados );
+                            controles = controlesFiltrados;
+                           
+                                                      
+                            
+                            renderSelect( controlesFiltrados , "#control_crearDesviaciones");
+                                         
+                                 }, 500); });
                            
                         })
 
