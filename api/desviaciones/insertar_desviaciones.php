@@ -31,11 +31,13 @@ if($method ==  "POST"){
 
     //Gestionar control
 
-    $sql = "CALL insertar_control(:nombrecontrol,:idpeligro,:idjerarquia)";
+    $sql = "CALL insertar_Desviaciones(:tipo,:descripcion,:idcontrol)";
     $stmt = $pdo->prepare($sql);
-    $stmt->bindValue(':nombrecontrol', $jsonClient->nombrecontrol );
-    $stmt->bindValue(':idpeligro',   $jsonClient->idpeligro );
-    $stmt->bindValue(':idjerarquia',   $jsonClient->idjerarquia );
+
+   
+    $stmt->bindValue(':tipo', $jsonClient->tipo );
+    $stmt->bindValue(':descripcion',   $jsonClient->descripcion );
+    $stmt->bindValue(':idcontrol',   $jsonClient->idcontrol );
 
     if ($stmt->execute()) {
             header("HTTP/1.1 201 ok");

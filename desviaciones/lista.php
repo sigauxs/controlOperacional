@@ -122,36 +122,47 @@ $dotenv->load();
                                     <label for="factor" class="form-label">Seleccionar un factor </label>
                                     <select class="form-select factor" 
                                     aria-label="Default select example " 
-                                    id="factor_actualizarControl">
+                                    id="factor_actualizarDesviacion">
                                                                               
                                     </select>
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="peligro_actualizarControl" class="form-label">Selecciona un peligro</label>
+                                    <label for="peligro_actualizarDesviacion" class="form-label">Selecciona un peligro</label>
                                     <select 
                                     class="form-select factor" 
                                     aria-label="Default select example" 
-                                    id="peligro_actualizarControl">
+                                    id="peligro_actualizarDesviacion">
                                                                               
                                     </select>
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="control" class="form-label">Selecciona una control</label>
+                                    <label for="control_actualizarDesviacion" class="form-label">Selecciona una control</label>
                                     <select 
                                     class="form-select factor" 
                                     aria-label="Default select example" 
-                                    id="control">                                  
+                                    id="control_actualizarDesviacion">                                  
                                     </select>
                                 </div>
 
                                 <div class="mb-3">
-                                    <label for="jerarquiaId" class="form-label">Selecciona una Jerarquia</label>
+                                    <label for="tipoDesviacionActualizar" class="form-label">Selecciona un tipo</label>
                                     <select 
                                     class="form-select factor" 
                                     aria-label="Default select example" 
-                                    id="jerarquiaId">                                  
+                                    id="tipoDesviacionActualizar">   
+                                    <option value="N">Negativo</option>
+                                    <option value="P">Positivo</option>                                
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="desviaciones" class="form-label">Selecciona una desviacion</label>
+                                    <select 
+                                    class="form-select factor" 
+                                    aria-label="Default select example" 
+                                    id="desviaciones">                                  
                                     </select>
                                 </div>
 
@@ -159,12 +170,12 @@ $dotenv->load();
 
 
                                 <div class="mb-3">
-                                    <label for="nombreControlActualizar"
+                                    <label for="nombreDesviacionActualizar"
                                            class="form-label"
                                            style="cursor:pointer"
-                                           onclick="sameName()" title="Usar el mismo nombre">Ingresa un Control</label>
+                                           onclick="sameName()" title="Usar el mismo nombre">Ingresa una desviacion</label>
                                     
-                                    <input type="text" class="form-control" id="nombreControlActualizar">
+                                    <input type="text" class="form-control" id="nombreDesviacionActualizar">
                                 </div>
 
 
