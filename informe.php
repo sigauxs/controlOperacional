@@ -13,9 +13,9 @@
         </style>
 </head>
 <body>
-        <iframe title="IndicadoresCO" 
+        <iframe title="IndicadoresCO-v6" 
         class="one-hundred"
-        src=https://app.powerbi.com/view?r=eyJrIjoiYWVjOTFkY2ItMmYzMS00ZjM1LThiZDAtNTk2Y2ZiZTQwMDUxIiwidCI6ImI2ZGI3YjkyLTMxZjQtNGJlZi04NDVlLTY1N2JjZDM0NjU3OCJ9
+        src="https://app.powerbi.com/view?r=eyJrIjoiYTUwNjViNGQtN2Y0Mi00NzVlLTkyYzYtMGI4ODZhMTdhMDU4IiwidCI6ImI2ZGI3YjkyLTMxZjQtNGJlZi04NDVlLTY1N2JjZDM0NjU3OCJ9"
         frameborder="0" 
         allowFullScreen="true">
         </iframe>

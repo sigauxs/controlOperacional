@@ -193,7 +193,7 @@ const ingresarDesviacion  = async ( tipo,descripcion,idcontrol ) => {
          
 }
         
-const ActualizarControl = async (idcontrol,jerarquiaId,descontrol) => {
+const ActualizarDesviacion = async (iddesv,descdesv,tipo) => {
 
   const options = {
       method: "PUT",
@@ -201,22 +201,22 @@ const ActualizarControl = async (idcontrol,jerarquiaId,descontrol) => {
         "Content-Type": "application/json",
       },
       "body": JSON.stringify({
-          idcontrol:   idcontrol,
-          idjerarquia: jerarquiaId,
-          descontrol:  descontrol
+          iddesv  : iddesv,
+          descdesv: descdesv,
+          tipo    : tipo
 
        })
     };
   
   
-    let url         = `${URL_ENV}/api/control/actualizar_control.php`;
+    let url         = `${URL_ENV}/api/desviaciones/actualizar_desviaciones.php`;
     const response  = await fetch(url, options)
     const respuesta = await response.json();  
       
    if (respuesta == "success") {
 
     Swal.fire({
-      title: 'Control Actualizado',     
+      title: 'desviación Actualizada',     
       confirmButtonText: 'Ok',
     }).then((result) => {
       if (result.isConfirmed) {
@@ -413,10 +413,36 @@ control_actualizarDesviacion.addEventListener("change",()=>{
 
 
 desviaciones.addEventListener("change",()=>{
-  console.log(JSON.parse(localStorage.getItem('desviaciones')));
-  const desviacionesLocales = JSON.parse(localStorage.getItem('desviaciones'));
+  
  
-  if( desviacionesLocales.length > 0){
+
+  
+  todosFpcdFetch(fpcd.desviacion)
+  .then( (desviaciones) => {  
+    
+    let desviacionActual = selector( "desviaciones" );
+    setTimeout(() => {
+
+
+      const desviacionesFiltradas = desviaciones.filter(
+        (desviacion) => {
+         return desviacion.Control_idControl == control_actualizarDesviacion.value
+       })
+
+       console.log( desviacionActual.value );
+
+       desviacionesFiltradas.forEach( (desviacionConsultada) => { 
+        if(desviacionActual.value == desviacionConsultada.idDesviacion){
+          tipoDesviacionActualizar.value = desviacionConsultada.Tipo_Desviacion;
+        }
+  })
+      
+       
+    }, 600);
+     
+  })
+
+  /*if( desviacionesLocales.length > 0){
     let desviacionesFiltradas = desviacionesLocales.filter((desviacion)=>{ return desviacion.Control_idControl == control_actualizarDesviacion.value})
     
     desviacionesFiltradas.forEach( (element) => { 
@@ -424,7 +450,7 @@ desviaciones.addEventListener("change",()=>{
         tipoDesviacionActualizar.value = element.Tipo_Desviacion;
       }
     });
-  }
+  }*/
   
 })
 
@@ -447,11 +473,11 @@ btnCrear.addEventListener('click', ( e )=>{
 btnActualizar.addEventListener("click",(e)=>{
 e.preventDefault();
 
-    if( nombreControlActualizar.value == ""){
+    if( nombreDesviacionActualizar.value == ""){
       alert("Ingrese un descripcion")
       return;
     }
 
-    ActualizarControl(control.value,jerarquiaId.value,nombreControlActualizar.value);
+    ActualizarDesviacion(desviaciones.value,nombreDesviacionActualizar.value,tipoDesviacionActualizar.value);
 }
 )

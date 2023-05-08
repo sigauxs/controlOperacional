@@ -198,7 +198,24 @@ $dotenv->load();
                 </div>
             </div>
         </div>
+        
+        <div class="row mt-5 justify-content-center">
+            <div class="col-md-3 text-center">
+               <a href="../fpcd/lista.php" style="color:white" class="btn-crear btn btn-register">Gestionar factor</a>
+            </div>
 
+            <div class="col-md-3 text-center">
+                <a href="../peligro/lista.php" style="color:white" class="btn-crear btn btn-register">Gestionar Peligro</a>
+            </div>
+
+            <div class="col-md-3 text-center">
+                <a href="../control/lista.php" style="color:white" class="btn-crear btn btn-register">Gestionar Control</a>
+            </div>
+
+            <div class="col-md-3 text-center">
+                <a href="../desviaciones/lista.php" style="color:white" class="btn-crear btn btn-register">Gestionar Desviaciones</a>
+            </div>
+        </div>
     </div>
 
 
