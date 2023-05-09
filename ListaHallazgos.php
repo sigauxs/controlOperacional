@@ -327,7 +327,7 @@ $resultado2 = $mysqli->query($sql2);*/
 
            <td class="col-md-1 td-desktop"> ${ hallazgo["ID HALL"] }</td>
            <td class="col-md-2 td-desktop"> ${ hallazgo["DESCRIPCION DEL HALLAZGO"].slice(0,33) } </td>
-           <td class="col-md-2 td-desktop"> <img id="myImg" class="showModal" data-content="img" width="25" height="25" src="http://controlope.sigpeconsultores.com.co${ hallazgo['EVIDENCIA'].slice(2)}"> </td>
+           <td class="col-md-2 td-desktop"> <img id="myImg" class="showModal" data-content="img" width="25" height="25" src="${URL_ENV}${ hallazgo['EVIDENCIA'].slice(2)}"> </td>
            <td class="col-md-1 td-desktop"> ${ hallazgo["FECHA"] } </td>
            <td class="col-md-2 td-desktop"> ${ hallazgo["FACTORES DE RIESGO"]}</td>
            <td class="col-md-2 td-desktop"> ${ hallazgo["AREA"] } </td>
