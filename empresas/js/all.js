@@ -9,6 +9,7 @@ const id = document.getElementById('id');
 let formAction = document.getElementById('formEmpresas');
 var opcion = ''
 let resultados = '';
+const btnFormEmpresas = document.getElementById("btnFormEmpresas");
 
 /* Funcion Mostrar para construir tr y td */
 const mostrar = (empresas) => {
@@ -44,9 +45,14 @@ todasEmpresasFetch();
 
 /*Checked assign value */
 estado.addEventListener("change",()=>{
+
+    console.log(estado.checked);
     if(estado.checked){
+        
         estado.value = "1";
+        console.log(estado.value)
     }else{
+        console.log(estado.value)
         estado.value = "0";
     }
 })
@@ -71,7 +77,7 @@ btnCrear.addEventListener('click', ()=>{
      modalEmpresas.show()
      opcion = 'crear';
      
-     formAction.action = `${URL_ENV}/server/nuevaEmpresas.php`;
+     //formAction.action = `${URL_ENV}/server/nuevaEmpresas.php`;
      console.log("crear")
      console.log(formAction.action);
      
@@ -89,14 +95,15 @@ on(document, 'click', '.btnEditar', e => {
     estado.value =   estadoForm;
     id.value = idForm;
     
-    formAction.action = `${URL_ENV}/server/actualizarEmpresas.php`;
+    //formAction.action = `${URL_ENV}/api/empresaUpdate.php`;
     
     if(estado.value == 1){
         $('#estado').prop("checked", true);
-    }else{
+    }else if( estado.value == 0){
         $('#estado').prop("checked", false);
     }
 
+    console.log( nombre.value , estado.value , id.value );
 
     opcion = 'editar'
      
@@ -110,7 +117,7 @@ on(document, 'click', '.btnEditar', e => {
 
 
 /* Evento submit para crear o editar */
-formEmpresas.addEventListener('submit', (e)=>{
+btnFormEmpresas.addEventListener('click', (e)=>{
     e.preventDefault();
     if(opcion=='crear'){        
 
@@ -118,7 +125,7 @@ formEmpresas.addEventListener('submit', (e)=>{
             estado.value = 0;
         }
 
-        fetch(`${URL_ENV}/api/nuevaEmpresas.php`, {
+        fetch(`${URL_ENV}/api/empresaNew.php`, {
             method:'POST',
             headers: {
                 'Content-Type':'application/json'
@@ -131,7 +138,7 @@ formEmpresas.addEventListener('submit', (e)=>{
         .then( response => response.json() )
         .then( data => {
             if (data == "success"){
-                //location.reload();
+                location.reload();
             }
         })
     }
@@ -140,11 +147,13 @@ formEmpresas.addEventListener('submit', (e)=>{
         console.log(idForm);
         console.log(nombre.value);
         console.log(estado.value);
+
+
         if(estado.value == "" | estado.value == undefined | estado.value == 0){
             estado.value = 0;
         }
 
-        fetch(`${URL_ENV}/api/actualizarEmpresas.php`,{
+        fetch(`${URL_ENV}/api/empresaUpdate.php`,{
             method: 'PUT',
             headers: {
                 'Content-Type':'application/json'

@@ -99,7 +99,7 @@ $dotenv->load();
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="" method="POST" id="formEmpresas">
+                    <form id="formEmpresas">
                         <div class="mb-3">
                              <input id="id" type="hidden" name="id">
                             <label for="nombre" class="col-form-label">Nombre:</label>
@@ -113,7 +113,7 @@ $dotenv->load();
                <div class="modal-footer" style="display:block">
                     <div class="row">
                         <div class="col-6">
-                             <button type="submit" style="width:100%; margin:0" class="btn btn-save">Guardar</button>
+                             <button id="btnFormEmpresas" type="button" style="width:100%; margin:0" class="btn btn-save">Guardar</button>
                         </div>
                         <div class="col-6">
                             <button type="button" style="width:100%; margin:0" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
