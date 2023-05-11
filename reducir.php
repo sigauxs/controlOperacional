@@ -4,7 +4,29 @@
 <head>
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="//kit.fontawesome.com/2dd4f6d179.js" crossorigin="anonymous"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
     <style>
+
+        .bg-brand {
+           
+    background-color: #EDEDED;
+
+        }
+
+        .brand_sigpe{
+    max-width: 100px;
+    padding: 10px;
+}
+
+.bg-brand{
+    background-color:#EDEDED;
+}
+
+.bg-brand span i {
+    padding: 10px;
+    color: #A0A0A0;
+}
         #dropzone {
             border: 2px dashed #ccc;
             padding: 20px;
@@ -14,8 +36,8 @@
             width: 800px;
             height: 400px;
             display: flex;
-    align-items: center;
-    justify-content: center;
+            align-items: center;
+            justify-content: center;
         }
 
         #progress-bar {
@@ -42,19 +64,57 @@
 </head>
 
 <body>
+<div class="container-fluid">
+   <div class="row">
+     <div class="col-11 bg-brand">
+       <a href="https://sigpeco.sigpeconsultores.com.co/menu.php">
+        <img src="<?php
+        if (isset($path)) { 
+          echo $path.'assets/images/brand_icon.png';}
+        else{
+          echo 'assets/images/brand_icon.png';
+        } ?>" 
+        class="brand_sigpe img-brand" alt="sigpe consultores">
+     </div></a> 
+     <div class="col-1 bg-brand text-center">
+     <a href="./menu.php"><button  style="border:0"><span><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></span></button></a>
+     </div>
+   </div>
+  </div>
 
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <div class="d-flex justify-content-center mt-5">
                     <div id="dropzone">
-                       <p>Arrestre y suelte la imagen aqui.</p>
+                       <p>Arrestre y suelte las imagenes aqui.</p>
                     </div>
                 </div>
-                <div class="d-flex justify-content-center mt-5">
-                    <div id="progress-bar"></div>
+                <div class="d-flex justify-content-center">
+                    <h4 class="my-3">O</h4>
                 </div>
-                
+                <div class="d-flex justify-content-center">
+                 <label class="btn btn-danger" for="uploadImagenes">Pulse aqui para adjuntar imagenes</label>  <input accept="image/png,image/jpeg" style='display:none' type="file" name="uploadImagenes" id="uploadImagenes" multiple>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    
+                </div>
+                <div class="d-flex justify-content-center mt-5">
+                    <div id="progress-bar" class="progress-bar progress-bar-striped bg-danger"></div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-md-9">
+                             <h3>Listado de imagenes comprimidas</h3>   
+                        </div>
+                        <div class="col-md-3 text-center">
+                        <button id="limpiar" class="btn btn-danger">Limpiar lista</button>
+                        </div>
+                  
+                    </div>
+                    
+                </div>
                 <div id="output"></div>
             </div>
         </div>
@@ -63,6 +123,111 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script>
+
+        const limpiar = document.getElementById("limpiar");
+        const cerrarpestana = document.getElementById("cerrarPestana");
+        const uploadImagenes = document.getElementById("uploadImagenes");
+
+
+        uploadImagenes.addEventListener("change",()=>{
+
+
+          
+
+
+            
+
+            event.preventDefault();
+
+            let allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
+            let filePath = uploadImagenes.value;
+
+            const files = uploadImagenes.files;
+            const totalFiles = files.length;
+            let   processedFiles = 0;
+            let   filesNombres = [];
+
+            if (!allowedExtensions.exec(filePath)) {
+        Swal.fire({
+          position: 'center',
+          icon: 'error',
+          title: 'Tipo de archivo no admitido',
+          showConfirmButton: false,
+          timer: 2000
+        })
+
+
+        uploadImagenes.value = '';
+        return false;
+      }
+
+
+
+// Iterate over each file
+Array.from(files).forEach((file, index) => {
+
+
+
+
+    const reader = new FileReader();
+
+    reader.onload = (event) => {
+        const image = new Image();
+        image.src = event.target.result;
+
+        image.onload = () => {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+
+            // Set the maximum width and height for the image
+            const maxWidth = 800;
+            const maxHeight = 800;
+
+            // Calculate the new dimensions while maintaining aspect ratio
+            let width = image.width;
+            let height = image.height;
+            if (width > maxWidth || height > maxHeight) {
+                if (width > height) {
+                    height *= maxWidth / width;
+                    width = maxWidth;
+                } else {
+                    width *= maxHeight / height;
+                    height = maxHeight;
+                }
+            }
+
+            // Set the canvas dimensions to the new dimensions
+            canvas.width = width;
+            canvas.height = height;
+
+            // Draw the image on the canvas
+            ctx.drawImage(image, 0, 0, width, height);
+
+            // Reduce image size
+            canvas.toBlob((blob) => {
+                showDownloadButton(file.name.replace(".jpg", ""), blob, index + 1);
+                processedFiles++;
+                const progress = Math.round((processedFiles / totalFiles) * 100);
+                updateProgressBar(progress);
+
+                if (processedFiles === totalFiles) {
+                    // All files have been processed
+                    // Clean up drag and drop listeners
+                    document.removeEventListener('dragover', handleDragOver);
+                    document.removeEventListener('drop', handleDrop);
+                }
+            }, 'image/jpeg', 1.0); // Adjust compression quality here (0.0 - 1.0)
+        };
+    };
+
+    reader.readAsDataURL(file);
+});
+
+
+
+
+        })
+
         function updateProgressBar(progress) {
             const progressBar = document.getElementById('progress-bar');
             progressBar.style.width = `${progress}%`;
@@ -74,6 +239,7 @@
 
             const downloadButton = document.createElement('a');
             downloadButton.href = URL.createObjectURL(imageBlob);
+            downloadButton.setAttribute("class","btn btn-danger mb-3 mx-3");
             downloadButton.download = `${nombre}_${index}.jpg`;
             downloadButton.innerText = `${nombre} ${index}`;
 
@@ -81,6 +247,13 @@
             output.appendChild(document.createElement('br'));
         }
 
+
+        limpiar.addEventListener("click",()=>{
+
+            location.reload();
+        });
+
+   
         // Handle file drop event
         function handleDrop(event) {
             event.preventDefault();
@@ -143,7 +316,7 @@
                                 document.removeEventListener('dragover', handleDragOver);
                                 document.removeEventListener('drop', handleDrop);
                             }
-                        }, 'image/jpeg', 0.7); // Adjust compression quality here (0.0 - 1.0)
+                        }, 'image/jpeg', 0.9); // Adjust compression quality here (0.0 - 1.0)
                     };
                 };
 
@@ -162,82 +335,6 @@
         dropzone.addEventListener('drop', handleDrop);
     </script>
 
-    <script>
-        /*
-        function updateProgressBar(progress) {
-            const progressBar = document.getElementById('progress-bar');
-            progressBar.style.width = `${progress}%`;
-        }
-
-    
-        function showDownloadButton(imageBlob, index) {
-            const output = document.getElementById('output');
-            const image = URL.createObjectURL(imageBlob);
-            
-            const downloadButton = document.createElement('a');
-            downloadButton.href = image;
-            downloadButton.download = `compressed_image_${index}.jpg`;
-            downloadButton.innerText = `Download Image ${index}`;
-            
-            output.appendChild(downloadButton);
-            output.appendChild(document.createElement('br'));
-        }
-
-        function handleDrop(event) {
-            event.preventDefault();
-            
-            const files = event.dataTransfer.files;
-
-            const totalFiles = files.length;
-            let processedFiles = 0;
-
-            Array.from(files).forEach((file, index) => {
-                const reader = new FileReader();
-
-                reader.onload = (event) => {
-                    const image = new Image();
-                    image.src = event.target.result;
-
-                    image.onload = () => {
-                        const canvas = document.createElement('canvas');
-                        const ctx = canvas.getContext('2d');
-
-                       
-                        canvas.width = image.width;
-                        canvas.height = image.height;
-
-                     
-                        ctx.drawImage(image, 0, 0);
-
-                    
-                        canvas.toBlob((blob) => {
-                            showDownloadButton(blob, index + 1);
-                            processedFiles++;
-                            const progress = Math.round((processedFiles / totalFiles) * 100);
-                            updateProgressBar(progress);
-
-                            if (processedFiles === totalFiles) {
-                       
-                                document.removeEventListener('dragover', handleDragOver);
-                                document.removeEventListener('drop', handleDrop);
-                            }
-                        }, 'image/jpeg', 0.7); 
-                    };
-                };
-
-                reader.readAsDataURL(file);
-            });
-        }
-
-     
-        function handleDragOver(event) {
-            event.preventDefault();
-        }
-
-        const dropzone = document.getElementById('dropzone');
-        dropzone.addEventListener('dragover', handleDragOver);
-        dropzone.addEventListener('drop', handleDrop);*/
-    </script>
 </body>
 
 </html>

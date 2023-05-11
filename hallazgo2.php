@@ -681,7 +681,10 @@ if (isset($_GET['idInspeccion'])) {
 
                               $("#urlImagen").change(function() {
                                 const picture = document.getElementById('urlImagen').files[0];
-                                let lfile = document.getElementById('lfile').innerHTML = "<img style='width:20px; height:20px' src='assets/images/adjunto.png'>";
+                                if( picture ){
+                                  let lfile = document.getElementById('lfile').innerHTML = "<img style='width:20px; height:20px' src='assets/images/adjunto.png'>";
+                                }
+                                
                               })
 
 
@@ -824,6 +827,24 @@ if (isset($_GET['idInspeccion'])) {
                               let allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
                               let filePath = url_image.value;
                               let labelfile = document.getElementById("lfile");
+                              let size = url_image.files[0].size;
+                              const sizekiloByte = parseInt(size / 1024);
+
+                              if (sizekiloByte > 1024) {
+                                Swal.fire({
+                                  position: 'center',
+                                  icon: 'error',
+                                  title: 'Esta imagen excede el tamaño permitido (max: 1mb - 1024kb)',
+                                  html: 'Para reducir tamaño,<a href="./reducir.php" target="_blank" style="text-decoration:none; color:#e31937"><b> click aqui</b></a> ',
+
+                                  showConfirmButton: true,
+                                  confirmButtonColor: '#E31D38',
+                                  confirmButtonText: 'Cerrar'
+
+                                })
+                                url_image.value = '';
+                                return false;
+                              }
 
                               if (!allowedExtensions.exec(filePath)) {
                                 Swal.fire({

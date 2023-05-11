@@ -374,16 +374,40 @@ $resultado2 = $mysqli->query($sql2);*/
     /*Validacion de extension de imagenes y alerta*/
     
     let url_image = document.getElementById("urlImagen");
+
     url_image.addEventListener("change", () => {
 
       let allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
       let filePath = url_image.value;
       let labelfile = document.getElementById("lfile");
+      let size      = url_image.files[0].size;
+      const sizekiloByte = parseInt(size / 1024);
 
-      if (!allowedExtensions.exec(filePath)) {
+    
+      if( sizekiloByte > 1024 ){
         Swal.fire({
           position: 'center',
           icon: 'error',
+          title: 'Esta imagen excede el tamaño permitido (max: 1mb - 1024kb)',
+          html:
+         'Para reducir tamaño,<a href="./reducir.php" target="_blank" style="text-decoration:none; color:#e31937"><b> click aqui</b></a> ',
+    
+        showConfirmButton: true,
+        confirmButtonColor: '#E31D38',
+        confirmButtonText:'Cerrar'
+
+        })
+                url_image.value = '';
+        return false;
+      }
+
+     
+      
+
+      if (!allowedExtensions.exec(filePath)) {  
+        Swal.fire({ 
+           position: 'center',     
+           icon: 'error',
           title: 'Tipo de archivo no admitido',
           showConfirmButton: false,
           timer: 2000
@@ -443,7 +467,10 @@ $resultado2 = $mysqli->query($sql2);*/
 
     $("#urlImagen").change(function() {
       const picture = document.getElementById('urlImagen').files[0];
-      let lfile = document.getElementById('lfile').innerHTML = picture.name;
+      if( picture ){
+        let   lfile = document.getElementById('lfile').innerHTML = picture.name;
+      }
+      
     })
     
     setTimeout(() => {

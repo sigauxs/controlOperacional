@@ -71,7 +71,7 @@ $tipoUsuario = $_SESSION['tipoUsuario'];
                             <div class="mb-3 row align-items-center ">
                                 <div class="col-sm-12 col-md-4">
                                     <label for="fechaInspeccion" class="form-label">Fecha de inspección:</label>
-                                    <input type="date" name="fechaInspeccion" id="fechaInspeccion" class="form-control text-center" required>
+                                    <input onblur="validarFecha()" type="date" name="fechaInspeccion" id="fechaInspeccion" class="form-control text-center" required>
                                 </div>
 
                                 <div class="col-sm-12 col-md-4">
@@ -240,6 +240,21 @@ $tipoUsuario = $_SESSION['tipoUsuario'];
 
 
    <script>
+
+
+        function validarFecha() {
+            let fechaInput     = document.getElementById("fechaInspeccion").value;
+            let fechaActual    = new Date();
+            let fechaIngresada = new Date(fechaInput);
+            if (fechaIngresada > fechaActual) {
+                alert("La fecha ingresada es posterior a la fecha actual, vuelva a ingresar una fecha valida");
+                return false;
+            }
+            return true;
+
+        }
+
+
        const fechDataArea = async () => {
 
             const options = {
