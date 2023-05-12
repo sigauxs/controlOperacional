@@ -243,11 +243,14 @@ $tipoUsuario = $_SESSION['tipoUsuario'];
 
 
         function validarFecha() {
-            let fechaInput     = document.getElementById("fechaInspeccion").value;
+            let fechaInput     = document.getElementById("fechaInspeccion");  
             let fechaActual    = new Date();
-            let fechaIngresada = new Date(fechaInput);
+            let fechaIngresada = new Date(fechaInput.value);
             if (fechaIngresada > fechaActual) {
                 alert("La fecha ingresada es posterior a la fecha actual, vuelva a ingresar una fecha valida");
+                
+                $("#fechaInspeccion").val("");
+              
                 return false;
             }
             return true;

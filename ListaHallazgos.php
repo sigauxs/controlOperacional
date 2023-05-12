@@ -738,7 +738,7 @@ $('.estadoCheckbox').change(function(){
            
           
            console.log(this.value +  " " +  idH)
-          this.value = 2;
+          this.value = 0;
           checkValue = this.value;
       }
       

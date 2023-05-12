@@ -23,7 +23,7 @@ const fetchDataExistentePertence = async (area) => {
       };
     
       var url = new URL(`${URL_ENV}/api/usuarios/perteneceusuario.php`);
-      console.log("url");
+      console.log(url);
       var params = { area: area };
       url.search = new URLSearchParams(params).toString();
     
@@ -51,7 +51,7 @@ const fetchDataSelectPertenece = async (selector,ruta) => {
     };
   
     var url = new URL(`${URL_ENV}/api/menus/${ruta}.php`);
-    console.log("url");
+    console.log(url);
     var params = {};
     url.search = new URLSearchParams(params).toString();
   
@@ -130,6 +130,8 @@ setValueSelect("estado_pertenece",estadoH.value);
 btnActualizarPertenece.addEventListener("click", function(){
   updatePertenece().then( 
     resp => {
+
+      console.log( resp )
       if(resp.status == "success"){
         Swal.fire({
           position: 'center',

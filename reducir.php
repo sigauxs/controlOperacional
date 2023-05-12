@@ -139,7 +139,7 @@
 
             event.preventDefault();
 
-            let allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
+            let allowedExtensions = /(.jpg|.jpeg|.png)$/i;
             let filePath = uploadImagenes.value;
 
             const files = uploadImagenes.files;
@@ -166,7 +166,7 @@
 // Iterate over each file
 Array.from(files).forEach((file, index) => {
 
-
+console.log( file );
 
 
     const reader = new FileReader();
@@ -205,7 +205,11 @@ Array.from(files).forEach((file, index) => {
 
             // Reduce image size
             canvas.toBlob((blob) => {
-                showDownloadButton(file.name.replace(".jpg", ""), blob, index + 1);
+
+              
+
+
+                showDownloadButton(file.name, blob, index + 1);
                 processedFiles++;
                 const progress = Math.round((processedFiles / totalFiles) * 100);
                 updateProgressBar(progress);
@@ -235,13 +239,32 @@ Array.from(files).forEach((file, index) => {
 
         // Helper function to display the compressed image download button
         function showDownloadButton(nombre, imageBlob, index) {
+
+            let nombreImagen = "";
+
+               if(nombre.includes(".png")){
+                    console.log(nombre.includes(".png"))
+                    nombreImagen = nombre.replace(".png","")
+                }
+
+                if(nombre.includes(".jpg")){
+                    console.log(nombre.includes(".jpg"))
+                    nombreImagen = nombre.replace(".jpg","")
+                }
+
+                if(nombre.includes(".jpeg")){
+                    console.log(nombre.includes(".jpeg"))
+                    nombreImagen = nombre.replace(".jpeg","")
+                }
+
+
             const output = document.getElementById('output');
 
             const downloadButton = document.createElement('a');
             downloadButton.href = URL.createObjectURL(imageBlob);
             downloadButton.setAttribute("class","btn btn-danger mb-3 mx-3");
-            downloadButton.download = `${nombre}_${index}.jpg`;
-            downloadButton.innerText = `${nombre} ${index}`;
+            downloadButton.download = `${nombreImagen}.jpg`;
+            downloadButton.innerText = `${nombreImagen} ${index}`;
 
             output.appendChild(downloadButton);
             output.appendChild(document.createElement('br'));

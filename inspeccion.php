@@ -60,7 +60,7 @@ $tipoUsuario = $_SESSION['tipoUsuario'];
                             <div class="mb-3 row align-items-center ">
                                 <div class="col-sm-12 col-md-4">
                                     <label for="fechaInspeccion" class="form-label">Fecha de inspección:</label>
-                                    <input onblur="validarFecha()" type="date" name="fechaInspeccion" id="fechaInspeccion" class="form-control text-center" required>
+                                    <input onchange="validarFecha()" type="date" name="fechaInspeccion" id="fechaInspeccion" class="form-control text-center" required>
                                 </div>
 
                                 <div class="col-sm-12 col-md-4">
@@ -215,13 +215,16 @@ $tipoUsuario = $_SESSION['tipoUsuario'];
     <script src="./js/defaultValue.js"></script>
     <script src="./js/services_select.js"></script>
     <script>
-
-        function validarFecha() {
-            let fechaInput     = document.getElementById("fechaInspeccion").value;
+            
+        function validarFecha( ) {
+            let fechaInput     = document.getElementById("fechaInspeccion");  
             let fechaActual    = new Date();
-            let fechaIngresada = new Date(fechaInput);
+            let fechaIngresada = new Date(fechaInput.value);
             if (fechaIngresada > fechaActual) {
                 alert("La fecha ingresada es posterior a la fecha actual, vuelva a ingresar una fecha valida");
+                
+                $("#fechaInspeccion").val("");
+              
                 return false;
             }
             return true;
