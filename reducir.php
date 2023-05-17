@@ -165,10 +165,6 @@
 
 // Iterate over each file
 Array.from(files).forEach((file, index) => {
-
-console.log( file );
-
-
     const reader = new FileReader();
 
     reader.onload = (event) => {
@@ -205,10 +201,6 @@ console.log( file );
 
             // Reduce image size
             canvas.toBlob((blob) => {
-
-              
-
-
                 showDownloadButton(file.name, blob, index + 1);
                 processedFiles++;
                 const progress = Math.round((processedFiles / totalFiles) * 100);

@@ -245,7 +245,7 @@ $tipoUsuario = $_SESSION['tipoUsuario'];
                         </div>
 
                         <div class='col-4 col-sm-4 float-start p-1 text-end'>
-                            <span style='padding-right: 5vw'> <a style="text-decoration:none;${ inspeccion['INSPECTOR'] == idUsuario.value ? 'color:red' : 'color:gray'} ; font-weight:bolder;" ${ inspeccion['INSPECTOR'] == idUsuario.value ? "href" : " "}="https://controlope.sigpeconsultores.com.co/editarInspeccion.php?idInspeccion=${inspeccion["ID INSP"]}"> ${"COD" + " " + inspeccion["ID INSP"]} </a> </span>
+                            <span style='padding-right: 5vw'> <a style="text-decoration:none;${ inspeccion['IDINSPECTOR'] == idUsuario.value | tipoUsuario == administrador ? 'color:red' : 'color:gray'} ; font-weight:bolder;" ${ inspeccion['INSPECTOR'] == idUsuario.value ? "href" : " "}="https://controlope.sigpeconsultores.com.co/editarInspeccion.php?idInspeccion=${inspeccion["ID INSP"]}"> ${"COD" + " " + inspeccion["ID INSP"]} </a> </span>
                         </div>
                         </div>
 
