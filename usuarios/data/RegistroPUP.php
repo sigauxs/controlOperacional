@@ -7,9 +7,11 @@
 include("../../connection/connection.php");
 $connect = new Conexion();
 
-require __DIR__ . '/vendor/autoload.php';
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-$dotenv->load();
+
+$url_count = strlen(__DIR__);
+$url = substr(__DIR__,0,($url_count-14));
+require  $url . '/vendor/autoload.php';
+
 
 if(isset($_POST['Registrar'])){
 if (isset($_POST['pnombre'], $_POST['papellido'], $_POST['tpdocumento'], $_POST['ndocumento'], $_POST['email'], $_POST['pass'], $_POST['cargo'], $_POST['tusuario'], $_POST['rol'], $_POST['area']) and $_POST['pnombre'] != '' and $_POST['papellido'] != '' and $_POST['tpdocumento'] != '' and $_POST['ndocumento'] != '' and $_POST['email'] != '' and $_POST['pass'] != '' and $_POST['cargo'] != '' and $_POST['tusuario'] != '' and $_POST['rol'] != '' and $_POST['area']) {
